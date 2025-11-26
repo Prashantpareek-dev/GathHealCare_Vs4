@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gath Heal Capsoule</title>
+    <link rel="icon" type="image/avif" href="./Images/logo1.avif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#8c23cf',
+                        'brand-secondary': '#f4c542',
+                        'brand-light': '#f7f7ff',
+                    },
+                    maxWidth: {
+                        'landing': '450px',
+                    },
+                    fontFamily: {
+                        'sans': ['Tiro Devanagari Hindi', 'serif'],
+                        'tiro': ['Tiro Devanagari Hindi', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 400;
+            /* Space for fixed CTA */
+        }
+
+        /* Apply Tiro Devanagari Hindi font to all important text elements */
+        .font-tiro {
+            font-family: 'Tiro Devanagari Hindi', serif !important;
+        }
+
+        .tiro-light {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 300;
+        }
+
+        .tiro-medium {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 500;
+        }
+
+        .tiro-bold {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 600;
+        }
+
+        /* Apply Tiro Devanagari Hindi font family to all headings and important elements */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .brand-text-enhanced,
+        .ingredients-title-glow,
+        .ingredient-name,
+        .ingredient-benefit,
+        button,
+        label,
+        input,
+        .trust-badge h3,
+        .trust-badge p,
+        .review-text,
+        .customer-name,
+        .step-title,
+        .section-subtitle {
+            font-family: 'Tiro Devanagari Hindi', serif !important;
+        }
+
+        /* Make important text bold and prominent */
+        h1,
+        h2,
+        h3,
+        .brand-text-enhanced,
+        .ingredients-title-glow,
+        .ingredient-name {
+            font-weight: 600 !important;
+        }
+
+        /* Medium weight for supporting text */
+        .ingredient-benefit,
+        p,
+        .section-subtitle,
+        button {
+            font-weight: 500 !important;
+        }
+
+        /* Container width control */
+        .main-container {
+            max-width: 450px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 450px) {
+            .main-container {
+                max-width: 100%;
+            }
+        }
+
+        /* Success Stories Column Layout with Advanced Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .customer-story-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .customer-story-card:hover {
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        /* Scroll-triggered animations */
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes glowPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(244, 197, 66, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(244, 197, 66, 0.8), 0 0 60px rgba(140, 35, 207, 0.4);
+            }
+        }
+
+        @keyframes scaleFloat {
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0px);
+            }
+
+            50% {
+                transform: scale(1.05) translateY(-10px);
+            }
+        }
+
+        .success-stories-grid {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .flip-card:hover {
+            animation: scaleFloat 2s ease-in-out infinite;
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            transition: all 0.3s ease;
+        }
+
+        .flip-card:hover .flip-card-front {
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+
+        .success-stories-grid::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .success-stories-grid::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .success-stories-grid::-webkit-scrollbar-thumb {
+            background: #f4c542;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+        }
+
+        .success-stories-grid::-webkit-scrollbar-thumb:hover {
+            background: #d4a532;
+            background-clip: content-box;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 450px) {
+            .success-stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flip-card {
+                height: 280px !important;
+            }
+        }
+
+        @keyframes ping-slow {
+            0% {
+                transform: scale(1);
+                opacity: .9
+            }
+
+            70% {
+                transform: scale(1.8);
+                opacity: 0
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        .animate-ping-slow {
+            animation: ping-slow 3s infinite;
+        }
+
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 3.5s infinite;
+        }
+
+        .star-animate {
+            animation: pulse 1.4s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        /* Fixed CTA Animations */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #f4c542, #ffd700, #f4c542);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Continuous pulse animation */
+        .pulse-animation {
+            animation: continuousPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes continuousPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 20px rgba(244, 197, 66, 0.5);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 30px rgba(244, 197, 66, 0.8);
+            }
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Button Animation Classes */
+        .cta-animate {
+            animation: ctaSlideVibrate 1.5s ease-in-out infinite;
+        }
+
+        @keyframes ctaSlideVibrate {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                box-shadow: 0 6px 25px rgba(244, 197, 66, 0.5);
+            }
+
+            20% {
+                transform: translateY(-4px) scale(1.03) rotate(1deg);
+                box-shadow: 0 10px 30px rgba(244, 197, 66, 0.7);
+            }
+
+            40% {
+                transform: translateY(-8px) scale(1.08) rotate(-1deg);
+                box-shadow: 0 15px 35px rgba(244, 197, 66, 0.9);
+            }
+
+            60% {
+                transform: translateY(-6px) scale(1.05) rotate(0.5deg);
+                box-shadow: 0 12px 32px rgba(244, 197, 66, 0.8);
+            }
+
+            80% {
+                transform: translateY(-2px) scale(1.02) rotate(-0.5deg);
+                box-shadow: 0 8px 28px rgba(244, 197, 66, 0.6);
+            }
+
+            100% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                box-shadow: 0 6px 25px rgba(244, 197, 66, 0.5);
+            }
+        }
+
+        /* Pulse glow effect */
+        .cta-glow {
+            animation: ctaGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes ctaGlow {
+            0% {
+                box-shadow: 0 4px 20px rgba(244, 197, 66, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 8px 30px rgba(244, 197, 66, 0.8), 0 0 20px rgba(244, 197, 66, 0.3);
+            }
+        }
+
+        /* Fixed CTA entrance animation */
+        #fixedCTA {
+            animation: slideUpEntrance 0.8s ease-out;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes slideUpEntrance {
+            0% {
+                transform: translateX(-50%) translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive CTA Design */
+        @media (max-width: 450px) {
+            #fixedCTA {
+                left: 0 !important;
+                right: 0;
+                transform: none !important;
+                width: 100% !important;
+            }
+
+            body {
+                padding-bottom: 60px;
+                /* Space for desktop CTA */
+            }
+        }
+
+        @media (min-width: 451px) {
+            body {
+                padding-bottom: 60px;
+                /* Space for desktop CTA */
+            }
+        }
+
+        /* Why Section Enhanced Animations */
+        .why-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .why-card:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(244, 197, 66, 0.4),
+                0 15px 35px rgba(140, 35, 207, 0.3);
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(244, 197, 66, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Glowing Border Animation */
+        .glow-border {
+            position: relative;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(244, 197, 66, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(244, 197, 66, 0.8),
+                    0 0 30px rgba(140, 35, 207, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 15px rgba(244, 197, 66, 0.7);
+            }
+        }
+
+        /* Image Container Hover Effect */
+        .image-container {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+
+        .image-container img {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Pulse Dots Animation */
+        .pulse-dot {
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(244, 197, 66, 0.6);
+            }
+
+            50% {
+                transform: scale(1.2);
+                box-shadow: 0 0 20px rgba(244, 197, 66, 0.9),
+                    0 0 30px rgba(244, 197, 66, 0.6);
+            }
+        }
+
+        /* Central Line Glow */
+        .glow-line {
+            animation: lineGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes lineGlow {
+            0% {
+                box-shadow: 0 0 8px rgba(156, 163, 175, 0.6);
+                background-color: rgb(156, 163, 175);
+            }
+
+            50% {
+                box-shadow: 0 0 15px rgba(244, 197, 66, 0.8);
+                background-color: rgba(244, 197, 66, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 0 12px rgba(156, 163, 175, 0.7);
+                background-color: rgb(156, 163, 175);
+            }
+        }
+
+        /* Scroll Animation Enhanced */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(60px) scale(0.9);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Flash Button Animation */
+        .flash-button {
+            animation: flashEffect 3s ease-in-out infinite;
+        }
+
+        @keyframes flashEffect {
+
+            0%,
+            70%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(244, 197, 66, 0.4);
+            }
+
+            10%,
+            30%,
+            50% {
+                opacity: 0.7;
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(244, 197, 66, 0.8),
+                    0 0 30px rgba(244, 197, 66, 0.6);
+            }
+
+            20%,
+            40% {
+                opacity: 1;
+                transform: scale(1.1);
+                box-shadow: 0 20px 50px rgba(244, 197, 66, 1),
+                    0 0 50px rgba(244, 197, 66, 0.8),
+                    0 0 70px rgba(140, 35, 207, 0.4);
+            }
+        }
+
+        /* Enhanced Flash Effect for Solution CTA */
+        #solutionCTAButton {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #solutionCTAButton::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: slideFlash 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes slideFlash {
+            0% {
+                left: -100%;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        #solutionCTAButton span {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced Image Effects for Product Image */
+        .shadow-3xl {
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25),
+                0 25px 50px -12px rgba(140, 35, 207, 0.3),
+                0 15px 25px -5px rgba(244, 197, 66, 0.2);
+        }
+
+        /* Product Image Hover Glow */
+        .group:hover img {
+            filter: brightness(1.25) contrast(1.1) saturate(1.25) drop-shadow(0 0 20px rgba(244, 197, 66, 0.6)) !important;
+            animation: productGlow 2s ease-in-out infinite;
+        }
+
+        /* Animated Border Glow for Product Image */
+        @keyframes productGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(244, 197, 66, 0.4),
+                    0 0 40px rgba(140, 35, 207, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(244, 197, 66, 0.8),
+                    0 0 60px rgba(140, 35, 207, 0.4),
+                    0 0 80px rgba(244, 197, 66, 0.3);
+            }
+        }
+
+        /* Enhanced Product Image Base Effects */
+        .product-image-enhanced {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: brightness(1.1) contrast(1.1) saturate(1.1);
+        }
+
+        .product-image-enhanced:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+    </style>
+</head>
+
+<body class="font-sans leading-relaxed bg-brand-light text-gray-800">
+    <div class="main-container w-full">
+        <!-- Header -->
+        <header
+            class="bg-brand-primary border-b-2 border-gray-100 text-white p-4 flex justify-between items-center max-[450px]:p-5  max-[450px]:px-4">
+            <div class="flex items-center gap-4 max-[450px]:gap-3">
+                <div
+                    class="brand-text-enhanced font-tiro text-4xl font-bold max-[450px]:text-4xl hover:scale-105 transition-transform duration-300 cursor-default">
+                    Gath Heal
+                </div>
+            </div>
+            <button
+                class="bg-brand-secondary text-brand-primary border-none px-6 py-3 rounded-lg font-bold text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3"
+                onclick="scrollToContact()">
+                <span class="relative z-10">🛒 ऑर्डर करें</span>
+            </button>
+        </header>
+        <!-- Main Content -->
+        <main class="bg-brand-primary">
+
+            <!-- hero section Section -->
+            <section class="w-full border-b-2 border-gray-100 bg-gradient-to-br from-purple-50 to-blue-50">
+                <div class="max-w-md mx-auto">
+                    <img src="./img/hero_image.avif" alt="Hero Image" class="w-full h-auto shadow-lg" />
+                </div>
+                <div
+                    class="px-6 py-4 bg-brand-primary font-tiro text-brand-secondary text-2xl leading-loose max-[450px]:px-4 max-[450px]:py-6 max-[450px]:leading-relaxed">
+                    <h2>“ <span class="text-3xl text-white">गाँठ छोटी हो या बड़ी </span> —उसके अंदर क्या बढ़ रहा है, यह
+                        हमें दिखाई नहीं देता।
+                        इसलिए समय रहते शरीर को<span class="text-3xl text-white"> भीतर से सुरक्षित और स्वच्छ रखना </span>
+                        ज़रूरी है।”
+                    </h2>
+                </div>
+
+            </section>
+
+            <!-- problem section Section -->
+            <section class="w-full">
+                <div class="max-w-md mx-auto">
+                    <img src="./img/Pro1.avif" alt="Money Back Guarantee" class="w-full h-auto shadow-lg" />
+                    <img src="./img/Pro2.avif" alt="Money Back Guarantee" class="w-full h-auto shadow-lg" />
+                </div>
+            </section>
+
+            <!-- Comparison Section -->
+            <section class="w-full bg-white py-6 px-4 max-[450px]:py-8 max-[450px]:px-3">
+                <div class="max-w-md mx-auto">
+
+                    <!-- Section Heading -->
+                    <div class="text-center mb-10 max-[450px]:mb-8">
+                        <div class="relative inline-block mb-6 max-[450px]:mb-4">
+                            <!-- Background with shadow -->
+                            <div
+                                class="bg-brand-primary rounded-2xl p-6 shadow-2xl border-4 border-brand-secondary max-[450px]:p-4 transform hover:scale-105 transition-all duration-300">
+                                <h2
+                                    class="text-5xl font-bold font-tiro text-brand-secondary mb-4 max-[450px]:text-4xl max-[450px]:mb-3 relative z-10 drop-shadow-lg">
+                                    जाने गाँठ हील ही सबसे अच्छा क्यों
+                                </h2>
+                            </div>
+                        </div>
+                        <p class="text-2xl font-tiro text-gray-600 max-[450px]:text-xl">
+                            Modern तरीक़े vs Gath Heal Care
+                        </p>
+                    </div>
+
+                    <!-- Comparison Table -->
+                    <div class="overflow-x-auto rounded-xl shadow-2xl border-2 border-brand-secondary">
+                        <table class="w-full bg-white">
+
+                            <!-- Table Header -->
+                            <thead>
+                                <tr class="bg-gradient-to-r from-brand-primary to-purple-700">
+                                    <th
+                                        class="px-6 py-4 text-left text-3xl font-bold font-tiro text-white max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-2xl">
+                                        Modern तरीक़े
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-3xl font-bold font-tiro text-white max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-2xl">
+                                        Gath Heal Care
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <!-- Table Body -->
+                            <tbody>
+
+                                <!-- Row 1 -->
+                                <tr class="border-b-2 border-gray-100">
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-red-500 flex-shrink-0 max-[450px]:text-2xl">❌
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-gray-700 leading-relaxed max-[450px]:text-xl">
+                                                महंगे टेस्ट
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-green-500 flex-shrink-0 max-[450px]:text-2xl">✅
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                                बिना किसी टेस्ट की आवश्यकता
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 2 -->
+                                <tr class="border-b-2 border-gray-100">
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-red-500 flex-shrink-0 max-[450px]:text-2xl">⚠️
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-gray-700 leading-relaxed max-[450px]:text-xl">
+                                                सर्जरी का डर
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-green-500 flex-shrink-0 max-[450px]:text-2xl">😌
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                                बिना दर्द, बिना चिंता
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 3 -->
+                                <tr class="border-b-2 border-gray-100">
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-red-500 flex-shrink-0 max-[450px]:text-2xl">💊
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-gray-700 leading-relaxed max-[450px]:text-xl">
+                                                बार-बार दवाइयाँ
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-green-500 flex-shrink-0 max-[450px]:text-2xl">🌿
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                                जड़ों से उपचार
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-red-500 flex-shrink-0 max-[450px]:text-2xl">⚡
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-gray-700 leading-relaxed max-[450px]:text-xl">
+                                                साइड इफेक्ट
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-6 max-[450px]:px-4 max-[450px]:py-4">
+                                        <div class="flex items-start gap-4 max-[450px]:gap-3">
+                                            <div class="text-3xl text-green-500 flex-shrink-0 max-[450px]:text-2xl">🛡️
+                                            </div>
+                                            <span
+                                                class="text-2xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                                कोई दुष्प्रभाव नहीं
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Bottom Highlight -->
+                    <div
+                        class="mt-8 text-center bg-gradient-to-r from-brand-primary to-purple-700 rounded-xl p-6 max-[450px]:p-4 max-[450px]:mt-6">
+                        <p
+                            class="text-2xl font-bold font-tiro text-brand-secondary mb-2 max-[450px]:text-xl max-[450px]:mb-1">
+                            🌟 स्मार्ट चुनाव करें
+                        </p>
+                        <p class="text-lg font-tiro text-white opacity-90 max-[450px]:text-base">
+                            प्राकृतिक और सुरक्षित समाधान के लिए Gath Heal Care चुनें
+                        </p>
+                        <button onclick="scrollToContact()"
+                            class="mt-4 bg-brand-secondary text-brand-primary px-8 py-4 rounded-xl text-xl font-tiro font-bold transition-all duration-300 hover:bg-opacity-90 hover:scale-105 shadow-lg max-[450px]:text-lg max-[450px]:px-6 max-[450px]:py-3 max-[450px]:mt-3">
+                            🛒 अभी ऑर्डर करें
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Why Gauth is Created Section -->
+            <section
+                class="w-full bg-brand-primary py-2 px-4 max-[450px]:py-4 max-[450px]:px-3 relative overflow-hidden">
+                <div class="max-w-md mx-auto">
+
+                    <!-- Section Title -->
+                    <div class="text-center mb-4 max-[450px]:mb-2">
+                        <div class="relative inline-block mb-6 max-[450px]:mb-4">
+                            <!-- Background with shadow -->
+                            <div
+                                class="bg-brand-secondary rounded-2xl p-6 shadow-2xl border-4 border-brand-primary max-[450px]:p-4 transform hover:scale-105 transition-all items-center duration-300">
+                                <h2
+                                    class="text-5xl font-bold font-tiro text-brand-primary mb-4 max-[450px]:text-4xl max-[450px]:mb-3 relative z-10 drop-shadow-lg">
+                                    क्यों बनती है गाँठ?
+                                </h2>
+                            </div>
+                            <p
+                                class="text-xl font-tiro text-white opacity-90 mb-4 max-[450px]:text-base max-[450px]:text-xl max-[450px]:mb-3">
+                                समझें इन मुख्य कारणों को जो गाँठ बनने का कारण बनते हैं
+                            </p>
+                            <div class="w-16 h-1 bg-brand-secondary mx-auto rounded-full"></div>
+                        </div>
+
+                        <!-- Zigzag Tree Layout -->
+                        <div class="relative scroll-animate" data-delay="0.2">
+                            <!-- Central Connection Line -->
+                            <div
+                                class="absolute left-1/2 top-0 bottom-0 w-1.5 bg-black transform -translate-x-1/2 max-[450px]:w-1 glow-line">
+                            </div>
+
+                            <!-- Reason 1 - Left Side -->
+                            <div class="flex items-center mb-12 max-[450px]:mb-8 scroll-animate" data-delay="0.3">
+                                <div class="w-1/2 pr-4 text-right max-[450px]:pr-2">
+                                    <div
+                                        class="why-card bg-white rounded-xl p-6 shadow-2xl border-2 border-brand-secondary max-[450px]:p-4 relative overflow-hidden">
+                                        <div
+                                            class="image-container mb-4 rounded-xl overflow-hidden border-2 border-brand-secondary glow-border max-[450px]:mb-3">
+                                            <img src="./img/why1.avif" alt="Blood Flow Issue"
+                                                class="w-full h-48 object-cover max-[450px]:h-32" />
+                                        </div>
+                                        <h3
+                                            class="text-3xl font-bold text-left font-tiro text-black mb-3 max-[450px]:text-2xl max-[450px]:mb-2 leading-tight">
+                                            नसों में ब्लड फ्लो का रुकना
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="w-6 h-6 bg-brand-secondary rounded-full border-4 border-white shadow-xl relative z-10 max-[450px]:w-4 max-[450px]:h-4 max-[450px]:border-2 pulse-dot"
+                                    style="margin-top: -40px;"></div>
+                                <div class="w-1/2"></div>
+                            </div>
+
+                            <!-- Reason 2 - Right Side -->
+                            <div class="flex items-start mb-12 max-[450px]:mb-8 scroll-animate" data-delay="0.4"
+                                style="margin-top: -180px;">
+                                <div class="w-1/2"></div>
+                                <div
+                                    class="w-6 h-6 bg-brand-secondary rounded-full border-4 border-white mt-[260px] max-[450px]:mt-[180px] shadow-xl relative z-10 max-[450px]:w-4 max-[450px]:h-4 max-[450px]:border-2 pulse-dot">
+                                </div>
+                                <div class="w-1/2 pl-4 text-left max-[450px]:pl-2" style="margin-top: 60px;">
+                                    <div
+                                        class="why-card bg-white rounded-xl p-6 shadow-2xl border-2 border-brand-secondary max-[450px]:p-4 relative overflow-hidden">
+                                        <div
+                                            class="image-container mb-4 rounded-xl overflow-hidden border-2 border-brand-secondary glow-border max-[450px]:mb-3">
+                                            <img src="./img/Why2.avif" alt="Toxin Accumulation"
+                                                class="w-full h-48 object-cover max-[450px]:h-32" />
+                                        </div>
+                                        <h3
+                                            class="text-3xl font-bold font-tiro text-black mb-3 max-[450px]:text-2xl max-[450px]:mb-2 leading-tight">
+                                            टिश्यू में गंदगी का जमना
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Reason 3 - Left Side -->
+                            <div class="flex items-center mb-12 max-[450px]:mb-8 scroll-animate" data-delay="0.5"
+                                style="margin-top: -180px;">
+                                <div class="w-1/2 pr-4 text-right max-[450px]:pr-2" style="margin-top: 60px;">
+                                    <div
+                                        class="why-card bg-white rounded-xl p-6 shadow-2xl border-2 border-brand-secondary max-[450px]:p-4 relative overflow-hidden">
+                                        <div
+                                            class="image-container mb-4 rounded-xl overflow-hidden border-2 border-brand-secondary glow-border max-[450px]:mb-3">
+                                            <img src="./img/why3.avif" alt="Recurring Inflammation"
+                                                class="w-full h-48 object-cover max-[450px]:h-32" />
+                                        </div>
+                                        <h3
+                                            class="text-3xl font-bold text-left font-tiro text-black mb-3 max-[450px]:text-2xl max-[450px]:mb-2 leading-tight">
+                                            सूजन का बार-बार आना
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="w-6 h-6 bg-brand-secondary rounded-full border-4 border-white shadow-xl relative z-10 max-[450px]:w-4 max-[450px]:h-4 max-[450px]:border-2 pulse-dot"
+                                    style="margin-top: 70px;"></div>
+                                <div class="w-1/2"></div>
+                            </div>
+
+                            <!-- Reason 4 - Right Side -->
+                            <div class="flex items-start scroll-animate" data-delay="0.6" style="margin-top: -180px;">
+                                <div class="w-1/2"></div>
+                                <div
+                                    class="w-6 h-6 bg-brand-secondary rounded-full border-4 border-white shadow-xl relative z-10 max-[450px]:w-4 max-[450px]:h-4 max-[450px]:border-2 pulse-dot mt-[270px] max-[450px]:mt-[190px]">
+                                </div>
+                                <div class="w-1/2 pl-4 text-left max-[450px]:pl-2" style="margin-top: 60px;">
+                                    <div
+                                        class="why-card bg-white rounded-xl p-6 shadow-2xl border-2 border-brand-secondary max-[450px]:p-4 relative overflow-hidden">
+                                        <div
+                                            class="image-container mb-4 rounded-xl overflow-hidden border-2 border-brand-secondary glow-border max-[450px]:mb-3">
+                                            <img src="./img/why4.avif" alt="Weak Circulation"
+                                                class="w-full h-48 object-cover max-[450px]:h-32" />
+                                        </div>
+                                        <h3
+                                            class="text-3xl font-bold font-tiro text-black mb-3 max-[450px]:text-2xl max-[450px]:mb-2 leading-tight">
+                                            शरीर का नैचुरल सर्कुलेशन कमजोर होना
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Decorative Element -->
+                        <div class="text-center mt-8 max-[450px]:mt-6">
+                            <div
+                                class="inline-block bg-brand-secondary px-6 py-2 rounded-full max-[450px]:px-4 max-[450px]:py-1">
+                                <span
+                                    class="text-brand-primary text-2xl font-tiro font-bold text-2xl max-[450px]:text-xl">
+                                    💡 समझें और समाधान पाएं
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Gath Heal Solution Section -->
+            <section class="w-full bg-white py-4 px-4 max-[450px]:py-4 max-[450px]:px-3 relative overflow-hidden">
+                <div class="max-w-md mx-auto">
+                    <!-- Section Heading -->
+                    <div class="text-center mb-6 max-[450px]:mb-4">
+                        <div class="relative inline-block mb-6 max-[450px]:mb-4">
+                            <!-- Background with shadow -->
+                            <div
+                                class="bg-brand-primary rounded-2xl p-6 shadow-2xl border-4 border-brand-secondary max-[450px]:p-4 transform hover:scale-105 mb-5 max-[450px]:mb-3 transition-all duration-300">
+                                <h2
+                                    class="text-5xl font-bold font-tiro text-brand-secondary mb-4 max-[450px]:text-4xl max-[450px]:mb-3 relative z-10 drop-shadow-lg">
+                                    समाधान - The Ayurvedic Support
+                                </h2>
+                            </div>
+                            <p
+                                class="text-4xl font-tiro text-brand-primary font-bold mb-4 max-[450px]:text-3xl max-[450px]:mb-3">
+                                पेश है —
+                            </p>
+                            <div
+                                class="inline-block bg-gradient-to-r from-brand-secondary to-yellow-400 px-6 py-3 rounded-xl shadow-2xl max-[450px]:px-4 max-[450px]:py-2">
+                                <p class="text-2xl font-tiro font-bold text-brand-primary max-[450px]:text-xl">
+                                    ⭐ Gath Heal Capsule
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="max-w-md mx-auto mb-4 max-[450px]:mb-3">
+                            <div class="relative group">
+                                <!-- Enhanced Shadow Layer -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur-xl transform translate-y-4 group-hover:translate-y-6 transition-all duration-500">
+                                </div>
+
+                                <!-- Main Image with Filters -->
+                                <img src="./img/productImage.avif" alt="Gath Heal Capsule Product" class="relative w-full h-auto rounded-2xl shadow-2xl border-4 border-brand-secondary/30 
+                                        transform transition-all duration-500 hover:scale-105 hover:shadow-3xl
+                                        filter brightness-110 contrast-110 saturate-110 hover:brightness-125 hover:saturate-125
+                                        backdrop-blur-sm" />
+
+                                <!-- Glowing Ring Effect -->
+                                <div
+                                    class="absolute inset-0 rounded-2xl border-2 border-brand-secondary/50 animate-pulse">
+                                </div>
+
+                                <!-- Corner Sparkle Effects -->
+                                <div
+                                    class="absolute -top-2 -right-2 w-6 h-6 bg-brand-secondary rounded-full animate-ping opacity-75 max-[450px]:w-4 max-[450px]:h-4">
+                                </div>
+                                <div
+                                    class="absolute -bottom-2 -left-2 w-4 h-4 bg-brand-primary rounded-full animate-bounce opacity-60 max-[450px]:w-3 max-[450px]:h-3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Description -->
+                        <div
+                            class="text-center mb-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 border-2 border-brand-secondary shadow-lg max-[450px]:p-3 max-[450px]:mb-3">
+                            <p class="text-lg font-tiro text-gray-700 leading-relaxed max-[450px]:text-base">
+                                एक 100% Ayurvedic, scientifically chosen herbs का formula जो
+                            </p>
+                            <p
+                                class="text-lg font-tiro text-brand-primary font-semibold mt-2 max-[450px]:text-base max-[450px]:mt-1">
+                                गाँठ, ब्लॉकेज और सूजन की जड़ में काम करता है।
+                            </p>
+                        </div>
+
+                        <!-- Call to Action Button with Animation -->
+                        <div class="text-center">
+                            <div class="relative inline-block">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-brand-secondary to-yellow-400 rounded-xl blur opacity-75 animate-pulse">
+                                </div>
+                                <button onclick="scrollToContact()"
+                                    class="relative bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary px-8 py-4 rounded-xl text-lg font-tiro font-bold transition-all duration-300 hover:scale-110 shadow-2xl max-[450px]:text-base max-[450px]:px-6 max-[450px]:py-3 transform hover:rotate-1 flash-button"
+                                    id="solutionCTAButton">
+                                    <span class="flex items-center justify-center gap-2">
+                                        <span>🛒</span>
+                                        <span>अभी ऑर्डर करें</span>
+                                        <span class="animate-bounce">✨</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <p
+                                class="text-brand-primary text-xl font-tiro mt-3 opacity-90 max-[450px]:text-lg max-[450px]:mt-2">
+                                🛒 तुरंत संपर्क करें और पाएं प्राकृतिक समाधान
+                            </p>
+                        </div>
+
+                    </div>
+            </section>
+
+            <!-- How to Heal Section -->
+            <section class="w-full bg-white py-2  max-[450px]:py-2 max-[450px]:px-3">
+                <div class="text-center mb-5 max-[450px]:mb-3">
+                    <div class="relative inline-block ">
+                        <!-- Background with shadow -->
+                        <div
+                            class="bg-brand-primary rounded-2xl p-4 shadow-2xl border-4 border-brand-secondary justify-center items-center max-[450px]:p-4 transform hover:scale-105 transition-all text-center duration-300">
+                            <h2
+                                class="text-5xl font-bold font-tiro text-brand-secondary max-[450px]:text-4xl text-center relative z-10 drop-shadow-lg">
+                                कैसे काम करता है? </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-md mx-auto">
+                    <img src="./img/how_to_heal.avif" alt="How to Heal" class="w-full h-auto shadow-lg" />
+                </div>
+            </section>
+
+            <!-- How to Use Section -->
+            <section class="w-full bg-white py-4 px-4 max-[450px]:py-2 max-[450px]:px-3">
+                <div class="max-w-md mx-auto text-center">
+
+                    <!-- Heading -->
+                    <div class="relative inline-block mb-6 max-[450px]:mb-4">
+                        <div class="relative inline-block ">
+                            <!-- Background with shadow -->
+                            <div
+                                class="bg-brand-primary rounded-2xl p-4 shadow-2xl border-4 border-brand-secondary justify-center items-center max-[450px]:p-4 transform hover:scale-105 transition-all text-center duration-300">
+                                <h2
+                                    class="text-5xl font-bold font-tiro text-brand-secondary max-[450px]:text-4xl text-center relative z-10 drop-shadow-lg">
+                                    कैसे काम करता है? </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards Container -->
+                    <div class="space-y-6 max-[450px]:space-y-4">
+
+                        <!-- Step 1 -->
+                        <div
+                            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 shadow-lg border-2 border-purple-200 max-[450px]:p-4">
+                            <img src="./img/7.jpg" class="w-full rounded-xl mb-4 shadow-md max-[450px]:mb-3"
+                                alt="Person Taking Capsule">
+
+                            <h3
+                                class="text-3xl font-bold font-tiro text-brand-primary mb-3 max-[450px]:text-2xl max-[450px]:mb-2">
+                                स्टेप 1: दिन में 2 बार
+                            </h3>
+                            <p
+                                class="text-gray-700 text-xl max-[450px]:text-xl  font-tiro font-medium leading-relaxed max-[450px]:text-base">
+                                खाना खाने के बाद 1 कैप्सूल लें। नियमित उपयोग से शरीर पर असर जल्दी दिखता है।
+                            </p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div
+                            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg border-2 border-blue-200 max-[450px]:p-4">
+                            <img src="./img/8.avif" class="w-full rounded-xl mb-4 shadow-md max-[450px]:mb-3"
+                                alt="45 to 60 Days Result">
+
+                            <h3
+                                class="text-3xl  font-bold font-tiro text-brand-primary mb-3 max-[450px]:text-2xl max-[450px]:mb-2">
+                                स्टेप 2: 45 – 60 दिन लगातार
+                            </h3>
+                            <p
+                                class="text-gray-700 text-xl max-[450px]:text-xl font-tiro font-medium leading-relaxed max-[450px]:text-base">
+                                लगातार 45 – 60 दिन उपयोग से गाँठ, सूजन और ब्लॉकेज पर स्पष्ट सुधार दिखता है।
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ingredient Benefits Section -->
+            <section class="w-full bg-brand-primary py-6 px-4 max-[450px]:py-4 max-[450px]:px-3">
+                <div class="max-w-md mx-auto text-center">
+
+                    <!-- Section Heading -->
+                    <div class="relative inline-block mb-6 max-[450px]:mb-4">
+                        <div class="relative inline-block ">
+                            <!-- Background with shadow -->
+                            <div
+                                class="bg-brand-primary rounded-2xl p-4 shadow-2xl border-4 border-brand-secondary justify-center items-center max-[450px]:p-4 transform hover:scale-105 transition-all text-center duration-300">
+                                <h2
+                                    class="text-5xl font-bold font-tiro text-brand-secondary max-[450px]:text-4xl text-center relative z-10 drop-shadow-lg">
+                                    जड़ी-बूटियों के फायदे
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient Poster Image -->
+                    <div class="mb-8 max-[450px]:mb-6">
+                        <img src="./img/Ingrediant.avif" alt="Herbal Ingredients"
+                            class="w-full h-auto rounded-xl shadow-2xl border-2 border-brand-secondary" />
+                    </div>
+
+                    <!-- Key Benefits Points -->
+                    <div class="space-y-6 max-[450px]:space-y-4">
+
+                        <!-- Benefit 1 -->
+                        <div
+                            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-secondary max-[450px]:p-4">
+                            <div class="flex items-center gap-4 max-[450px]:gap-3">
+                                <div
+                                    class="w-36 h-36 flex items-center justify-center flex-shrink-0 max-[450px]:w-30 max-[450px]:h-30">
+                                    <img src="./img/Dec1.avif" alt="Benefit 1"
+                                        class="w-full h-full object-contain rounded-full" />
+                                </div>
+                                <p
+                                    class="text-3xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                  <span class="text-4xl text-black">हल्दी-</span> गांठ के सूजन और संक्रमण को कम करती है
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div
+                            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-secondary max-[450px]:p-4">
+                            <div class="flex items-center gap-4 max-[450px]:gap-3">
+                                <div
+                                    class="w-36 h-36 flex items-center justify-center flex-shrink-0 max-[450px]:w-30 max-[450px]:h-30">
+                                    <img src="./img/Dec2.avif" alt="Benefit 2"
+                                        class="w-full h-full object-contain rounded-full" />
+                                </div>
+                                <p
+                                    class="text-3xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                   <span class="text-4xl text-black">गिलोय-</span> इम्युनिटी बढ़ाकर शरीर को शुद्ध करता है
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div
+                            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-secondary max-[450px]:p-4">
+                            <div class="flex items-center gap-4 max-[450px]:gap-3">
+                                <div
+                                    class="w-36 h-36 flex items-center justify-center flex-shrink-0 max-[450px]:w-30 max-[450px]:h-30">
+                                    <img src="./img/Dec3.avif" alt="Benefit 3"
+                                        class="w-full h-full object-contain rounded-full" />
+                                </div>
+                                <p
+                                    class="text-3xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                   <span class="text-4xl text-black">अश्वगंधा-</span> टिश्यूज को मजबूत बनाता है
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div
+                            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-secondary max-[450px]:p-4">
+                            <div class="flex items-center gap-4 max-[450px]:gap-3">
+                                <div
+                                    class="w-36 h-36 flex items-center justify-center flex-shrink-0 max-[450px]:w-30 max-[450px]:h-30">
+                                    <img src="./img/Dec4.avif" alt="Benefit 4"
+                                        class="w-full h-full object-contain rounded-full" />
+                                </div>
+                                <p
+                                    class="text-3xl font-tiro font-semibold text-brand-primary leading-relaxed max-[450px]:text-xl">
+                                  <span class="text-4xl text-black">शुद्ध गुग्गुल-</span> फैट व फाइब्रस टिश्यू को टूटने में मदद करता है
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom CTA -->
+                    <div class="text-center mt-8 max-[450px]:mt-6">
+                        <button onclick="scrollToContact()"
+                            class="bg-brand-secondary text-brand-primary px-8 py-4 rounded-xl text-2xl font-tiro font-bold transition-all duration-300 hover:bg-opacity-90 hover:scale-105 shadow-lg max-[450px]:text-2xl max-[450px]:px-8 max-[450px]:py-4">
+                            🛒 अभी ऑर्डर करें
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--Certificate Section -->
+            <section class="w-full">
+                
+                <div class="max-w-md mx-auto">
+                    <img src="./img/Trust_Banner.avif" alt="Money Back Guarantee" class="w-full h-auto shadow-lg" />
+                </div>
+            </section>
+
+            <!-- Money Back Guarantee Section -->
+            <section class="w-full">
+                <div class="max-w-md mx-auto">
+                    <img src="./img/Money_Back.avif" alt="Money Back Guarantee" class="w-full h-auto shadow-lg" />
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="px-4 py-4 bg-brand-primary text-white max-[450px]:py-6 max-[450px]:px-3" id="contact">
+                <form id="contactForm">
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="name"
+                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
+                            नाम:</label>
+                        <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="phone"
+                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">फोन
+                            नंबर:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="अपना फोन नंबर लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <button type="submit"
+                        class="bg-brand-secondary text-brand-primary border-none py-4 px-8 rounded text-2xl font-tiro font-bold cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-lg max-[450px]:mt-3">
+                        <span>✨</span>
+                        अभी ऑर्डर करें
+                        <span>✨</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Success Stories Section -->
+            <section
+                class="px-4 py-8 bg-gradient-to-r from-brand-primary to-purple-700 text-white max-[450px]:py-6 max-[450px]:px-3">
+                <div class="max-w-md w-full mb-5 bg-white shadow-xl rounded-xl overflow-hidden">
+
+                    <!-- Header Section -->
+                    <div class="bg-gradient-to-r from-[#8c23cf] to-[#6e19a2] text-white p-6 text-center relative">
+                        <img src="./img/customer5.jpeg" alt="सीमा देवी"
+                            class="w-24 h-24 rounded-full border-4 border-white mx-auto absolute left-1/2 -bottom-12 transform -translate-x-1/2" />
+
+                    </div>
+
+                    <!-- Body Section -->
+                    <div class="pt-16 text-black px-6 pb-8 text-center">
+                        <h2 class="text-2xl font-bold mt-2 font-tiro">सीमा देवी</h2>
+                        <p class="text-lg opacity-90 text-black font-tiro">दिल्ली - Real Customer Results</p>
+
+                        <!-- Star Rating -->
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="text-[#f4c542] text-xl star-animate">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-100">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-200">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-300">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-500">★</span>
+                        </div>
+
+                        <p class="text-gray-700 text-xl leading-relaxed px-2 font-tiro font-medium">
+                            "मेरी 5 साल पुरानी कड़ी गाँठ हर महीने और दर्दनाक हो रही थी। चलने-फिरने में तकलीफ़, कपड़े
+                            पहनने में रगड़ और हमेशा एक डर—कहीं ये बढ़ न जाए। Gath Heal Care शुरू करने के कुछ हफ़्तों बाद
+                            ही गाँठ मुलायम लगने लगी। धीरे-धीरे इसका आकार भी कम होता गया और अब मैं बिना असुविधा के आराम
+                            से उठ-बैठ पाती हूँ।"
+                        </p>
+
+                        <div
+                            class="bg-gradient-to-r from-brand-light to-white rounded-lg p-3 border-l-4 border-brand-secondary mt-4">
+                            <h4 class="text-brand-primary font-tiro font-bold text-base">
+                                ✨ Success Story — सफल उपचार की कहानी ✨
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-md w-full mb-5 bg-white shadow-xl rounded-xl overflow-hidden">
+
+                    <!-- Header Section -->
+                    <div class="bg-gradient-to-r from-[#8c23cf] to-[#6e19a2] text-white p-6 text-center relative">
+                        <img src="./img/customer4.jpeg" alt=" अशोक कुमार"
+                            class="w-24 h-24 rounded-full border-4 border-white mx-auto absolute left-1/2 -bottom-12 transform -translate-x-1/2" />
+
+                    </div>
+
+                    <!-- Body Section -->
+                    <div class="pt-16 text-black px-6 pb-8 text-center">
+                        <h2 class="text-2xl font-bold mt-2 font-tiro"> अशोक कुमार</h2>
+                        <p class="text-lg opacity-90 text-black font-tiro"> राजस्थान - Real Customer Results</p>
+
+                        <!-- Star Rating -->
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="text-[#f4c542] text-xl star-animate">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-100">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-200">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-300">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-500">★</span>
+                        </div>
+
+                        <p class="text-gray-700 text-xl leading-relaxed px-2 font-tiro font-medium">
+                            "मेरी बाजू पर बनी गाँठ का उभार दिनों-दिन बढ़ रहा था और देखने में भी बहुत खराब लगता था।
+                            डॉक्टर ने बोला था कि अगर बढ़े तो ऑपरेशन कराना पड़ सकता है—इसी बात ने मुझे सबसे ज़्यादा
+                            डराया। Gath Heal Care इस्तेमाल करने के बाद कुछ ही समय में गाँठ का उभार कम होने लगा। अब ना
+                            दर्द है, ना सूजन, और सबसे ज़रूरी—मन का डर हमेशा के लिए खत्म हो गया। मुझे पहली बार लगा कि
+                            प्राकृतिक तरीके से भी समाधान संभव है।"
+                        </p>
+
+                        <div
+                            class="bg-gradient-to-r from-brand-light to-white rounded-lg p-3 border-l-4 border-brand-secondary mt-4">
+                            <h4 class="text-brand-primary font-tiro font-bold text-base">
+                                ✨ Success Story — सफल उपचार की कहानी ✨
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-md w-full mb-5 bg-white shadow-xl rounded-xl overflow-hidden">
+
+                    <!-- Header Section -->
+                    <div class="bg-gradient-to-r from-[#8c23cf] to-[#6e19a2] text-white p-6 text-center relative">
+                        <img src="./img/customer2.png" alt="Puja Devi"
+                            class="w-24 h-24 rounded-full border-4 border-white mx-auto absolute left-1/2 -bottom-12 transform -translate-x-1/2" />
+
+                    </div>
+
+                    <!-- Body Section -->
+                    <div class="pt-16 text-black px-6 pb-8 text-center">
+                        <h2 class="text-2xl font-bold mt-2 font-tiro">पूजा शर्मा</h2>
+                        <p class="text-lg opacity-90 text-black font-tiro">मुंबई - Real Customer Results</p>
+
+                        <!-- Star Rating -->
+                        <div class="flex justify-center gap-2 mb-4">
+                            <span class="text-[#f4c542] text-xl star-animate">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-100">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-200">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-300">★</span>
+                            <span class="text-[#f4c542] text-xl star-animate delay-500">★</span>
+                        </div>
+
+                        <p class="text-gray-700 text-xl leading-relaxed px-2 font-tiro font-medium">
+                            "मेरे कंधे पर बनी छोटी गाँठ धीरे-धीरे दर्द देने लगी थी। हर दिन हल्का भारीपन और डर महसूस होता
+                            था। Gath Heal Care लेने के कुछ हफ्तों में ही गाँठ मुलायम होने लगी और दर्द लगभग खत्म हो गया।
+                            अब इसका आकार भी काफी कम है—पहली बार राहत और भरोसा महसूस हुआ।"
+                        </p>
+
+                        <div
+                            class="bg-gradient-to-r from-brand-light to-white rounded-lg p-3 border-l-4 border-brand-secondary mt-4">
+                            <h4 class="text-brand-primary font-tiro font-bold text-base">
+                                ✨ Success Story — सफल उपचार की कहानी ✨
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Stories CTA -->
+                <div class="mt-8 text-center">
+                    <p class="text-xl font-tiro font-medium mb-4 max-[450px]:text-lg opacity-90">
+                        आप भी इन खुश ग्राहकों की तरह अपनी समस्या का समाधान पाएं!
+                    </p>
+                    <button onclick="scrollToContact()"
+                        class="bg-brand-secondary text-brand-primary px-8 py-4 rounded-xl text-xl font-tiro font-bold transition-all duration-300 hover:bg-opacity-90 hover:scale-105 shadow-lg max-[450px]:text-xl max-[450px]:px-8 max-[450px]:py-4">
+                        🛒 आज ही ऑर्डर करें
+                    </button>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="px-4 py-8 bg-brand-light text-brand-primary max-[450px]:py-6 max-[450px]:px-3">
+                <div class="mb-8 text-center">
+                    <h2 class="text-3xl font-tiro font-bold mb-4 max-[450px]:text-2xl">
+                        📌 FAQ – अक्सर पूछे जाने वाले सवाल
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div
+                        class="faq-item bg-white rounded-xl border-2 border-brand-secondary shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <button
+                            class="faq-question w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary font-tiro font-bold text-xl max-[450px]:text-lg max-[450px]:p-4"
+                            onclick="toggleFAQ(1)">
+                            <span>1. क्या यह हर तरह की गाँठ पर असर करता है?</span>
+                            <span
+                                class="faq-icon text-2xl transition-transform duration-300 max-[450px]:text-xl">+</span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-brand-light border-t-2 border-brand-secondary max-[450px]:p-4">
+                                <p
+                                    class="text-lg text-gray-700 font-tiro font-medium max-[450px]:text-base leading-relaxed">
+                                    – हाँ, यह ज्यादातर सामान्य फैटी और सॉफ्ट टिश्यू गाँठों पर असर दिखाता है।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div
+                        class="faq-item bg-white rounded-xl border-2 border-brand-secondary shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <button
+                            class="faq-question w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary font-tiro font-bold text-xl max-[450px]:text-lg max-[450px]:p-4"
+                            onclick="toggleFAQ(2)">
+                            <span>2. कितने समय में रिज़ल्ट दिखना शुरू होता है?</span>
+                            <span
+                                class="faq-icon text-2xl transition-transform duration-300 max-[450px]:text-xl">+</span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-brand-light border-t-2 border-brand-secondary max-[450px]:p-4">
+                                <p
+                                    class="text-lg text-gray-700 font-tiro font-medium max-[450px]:text-base leading-relaxed">
+                                    – नियमित उपयोग से 3–6 हफ्तों में शुरुआती बदलाव महसूस हो सकते हैं।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div
+                        class="faq-item bg-white rounded-xl border-2 border-brand-secondary shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <button
+                            class="faq-question w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary font-tiro font-bold text-xl max-[450px]:text-lg max-[450px]:p-4"
+                            onclick="toggleFAQ(3)">
+                            <span>3. क्या इसके कोई साइड इफ़ेक्ट हैं?</span>
+                            <span
+                                class="faq-icon text-2xl transition-transform duration-300 max-[450px]:text-xl">+</span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-brand-light border-t-2 border-brand-secondary max-[450px]:p-4">
+                                <p
+                                    class="text-lg text-gray-700 font-tiro font-medium max-[450px]:text-base leading-relaxed">
+                                    – नहीं, यह हर्बल फॉर्मूला है और सामान्यतः सुरक्षित माना जाता है।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div
+                        class="faq-item bg-white rounded-xl border-2 border-brand-secondary shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <button
+                            class="faq-question w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary font-tiro font-bold text-xl max-[450px]:text-lg max-[450px]:p-4"
+                            onclick="toggleFAQ(4)">
+                            <span>4. क्या पुरानी और कड़ी गाँठ पर भी असर करेगा?</span>
+                            <span
+                                class="faq-icon text-2xl transition-transform duration-300 max-[450px]:text-xl">+</span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-brand-light border-t-2 border-brand-secondary max-[450px]:p-4">
+                                <p
+                                    class="text-lg text-gray-700 font-tiro font-medium max-[450px]:text-base leading-relaxed">
+                                    – हाँ, लेकिन पुरानी गाँठों में असर धीरे-धीरे दिखता है।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div
+                        class="faq-item bg-white rounded-xl border-2 border-brand-secondary shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <button
+                            class="faq-question w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-brand-secondary to-yellow-400 text-brand-primary font-tiro font-bold text-xl max-[450px]:text-lg max-[450px]:p-4"
+                            onclick="toggleFAQ(5)">
+                            <span>5. क्या इसे डॉक्टर की दवाई के साथ लिया जा सकता है?</span>
+                            <span
+                                class="faq-icon text-2xl transition-transform duration-300 max-[450px]:text-xl">+</span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-brand-light border-t-2 border-brand-secondary max-[450px]:p-4">
+                                <p
+                                    class="text-lg text-gray-700 font-tiro font-medium max-[450px]:text-base leading-relaxed">
+                                    – हाँ, लेकिन कोई गंभीर समस्या हो तो पहले डॉक्टर से सलाह लेना बेहतर है।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ CTA -->
+                <div class="mt-8 text-center">
+                    <p class="text-xl text-gray-700 font-tiro font-medium mb-4 max-[450px]:text-lg">
+                        अधिक जानकारी के लिए आज ही ऑर्डर करें!
+                    </p>
+                    <button onclick="scrollToContact()"
+                        class="bg-brand-primary text-white px-8 py-4 rounded-xl text-xl font-tiro font-bold transition-all duration-300 hover:bg-opacity-90 hover:scale-105 shadow-lg max-[450px]:text-xl max-[450px]:px-8 max-[450px]:py-4">
+                        🛒 अभी ऑर्डर करें
+                    </button>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-brand-primary text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3">
+            <div class="text-sm text-gray-300 mt-4 font-tiro max-[450px]:text-xs max-[450px]:mt-2">
+                <p><strong class="font-tiro font-semibold">Disclaimer :-</strong> Results may vary by individual.
+                    Consult
+                    with a healthcare professional for personalized hearing assessment. This device is not intended to
+                    diagnose, treat, cure, or prevent any medical condition.</p>
+            </div>
+        </footer>
+        <!-- Thank You Modal -->
+        <div id="thankYouModal"
+            class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
+            <div
+                class="bg-brand-light p-8 rounded-lg text-center max-w-sm mx-4 max-[450px]:p-6 max-[450px]:max-w-xs border-2 border-brand-secondary">
+                <h2 class="text-brand-primary mb-4 text-2xl font-tiro font-bold max-[450px]:text-xl max-[450px]:mb-3">
+                    धन्यवाद!</h2>
+                <p class="text-xl mb-6 font-tiro font-medium max-[450px]:text-lg max-[450px]:mb-4 text-gray-700">हमने
+                    आपकी
+                    जानकारी
+                    प्राप्त कर ली है और आपकी
+                    मुफ्त सलाह निर्धारित करने के लिए 24 घंटे के भीतर आपसे संपर्क करेंगे।</p>
+            </div>
+        </div>
+
+        <!-- Fixed CTA Form at Bottom -->
+        <div id="fixedCTA"
+            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-brand-primary to-purple-700 shadow-2xl max-w-[450px] w-full border-t-4 border-brand-secondary">
+            <div class="px-3 py-3 w-full">
+                <div class="flex items-center justify-between gap-2">
+                    <!-- Offer Text -->
+                    <div class="flex-1 text-white">
+                        <div class="text-sm font-tiro text-brand-secondary font-extrabold mb-1 max-[450px]:text-sm">
+                            🔥 "Safe Body – Safe Life" Offer
+                        </div>
+                        <div class="text-xs opacity-90 font-tiro font-bold max-[450px]:text-xs">
+                            स्टॉक खत्म होने से पहले प्राप्त करें
+                        </div>
+                    </div>
+
+                    <!-- Order Now Button -->
+                    <button id="ctaButton" onclick="scrollToContact()"
+                        class="cta-button bg-brand-secondary text-brand-primary px-4 py-2 rounded-xl font-tiro font-extrabold text-sm transition-all duration-300 shadow-lg hover:scale-105 max-[450px]:px-3 max-[450px]:py-1 max-[450px]:text-sm pulse-animation">
+                        🛒 Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showThankYou() {
+            document.getElementById('thankYouModal').style.display = 'flex';
+
+            // Auto close after 2 seconds
+            setTimeout(() => {
+                closeModal();
+            }, 2000);
+        }
+
+        function closeModal() {
+            document.getElementById('thankYouModal').style.display = 'none';
+            document.getElementById('contactForm').reset();
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleFAQ(faqNumber) {
+            const faqItem = document.querySelectorAll('.faq-item')[faqNumber - 1];
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = faqItem.querySelector('.faq-icon');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach((item, index) => {
+                if (index !== faqNumber - 1) {
+                    item.style.maxHeight = '0px';
+                    document.querySelectorAll('.faq-icon')[index].textContent = '+';
+                    document.querySelectorAll('.faq-icon')[index].style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current FAQ
+            if (isOpen) {
+                answer.style.maxHeight = '0px';
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+
+                // Smooth scroll to make sure the opened FAQ is visible
+                setTimeout(() => {
+                    faqItem.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }, 200);
+            }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            if (name && phone) {
+                showThankYou();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('thankYouModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Scroll Animation for Success Stories
+        function initScrollAnimations() {
+            const animateElements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.getAttribute('data-delay') || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, parseFloat(delay) * 1000);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animateElements.forEach((element) => {
+                observer.observe(element);
+            });
+        }
+
+        // Initialize scroll animations when page loads
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+        // Fixed CTA Button Animation
+        function startCTAAnimation() {
+            const ctaButton = document.getElementById('ctaButton');
+            if (ctaButton) {
+                // Add animation classes
+                ctaButton.classList.add('cta-animate', 'cta-glow');
+
+                // Remove animation after 2 seconds
+                setTimeout(() => {
+                    ctaButton.classList.remove('cta-animate', 'cta-glow');
+                }, 2000);
+            }
+        }
+
+        // Start CTA animation every 5 seconds
+        setInterval(startCTAAnimation, 5000);
+
+        // Start the first animation after 2 seconds of page load
+        setTimeout(startCTAAnimation, 2000);
+
+        // Enhanced Flash Animation for Solution CTA Button
+        function startSolutionCTAFlash() {
+            const solutionButton = document.getElementById('solutionCTAButton');
+            if (solutionButton) {
+                // Add extra intensity flash class
+                solutionButton.classList.add('super-flash');
+
+                // Remove extra flash after animation cycle
+                setTimeout(() => {
+                    solutionButton.classList.remove('super-flash');
+                }, 3000);
+            }
+        }
+
+        // Start solution button flash animation every 8 seconds
+        setInterval(startSolutionCTAFlash, 8000);
+
+        // Start the first solution flash animation after 4 seconds of page load
+        setTimeout(startSolutionCTAFlash, 4000);
+    </script>
+
+</body>
+
+</html>
