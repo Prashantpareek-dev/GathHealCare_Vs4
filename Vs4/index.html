@@ -1,0 +1,2644 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gath Heal Care – 100% Ayurvedic Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #6b8e23;
+      --purple-deep: #3f5220;
+      --purple-mid: #556b2f;
+      --purple-soft: #a4bc72;
+      --teal: #7c9440;
+      --teal-soft: #eef5dd;
+      --coral: #b98b3d;
+      --coral-soft: #f6ecd3;
+      --gold: #d4b56a;
+      --gold-deep: #b08d3f;
+      --gold-dark: #5f471a;
+      --cream: #f8f6ee;
+      --p10: rgba(107, 142, 35, 0.10);
+      --p18: rgba(107, 142, 35, 0.18);
+      --p30: rgba(107, 142, 35, 0.30);
+      --g20: rgba(212, 181, 106, 0.20);
+      --g35: rgba(212, 181, 106, 0.35);
+      --g60: rgba(212, 181, 106, 0.60);
+      --g80: rgba(212, 181, 106, 0.80);
+      --w10: rgba(255, 255, 255, 0.10);
+      --w20: rgba(255, 255, 255, 0.20);
+      --w40: rgba(255, 255, 255, 0.40);
+      --w70: rgba(255, 255, 255, 0.70);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Halant', serif;
+      background: var(--g80);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 450px;
+      background: var(--cream);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .lbl {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+    }
+
+    .lbl-gold {
+      background: var(--gold);
+      color: var(--gold-dark);
+    }
+
+    .lbl-purple {
+      background: var(--purple);
+      color: var(--gold);
+    }
+
+    .lbl-deep {
+      background: var(--purple-deep);
+      color: var(--gold);
+    }
+
+    .lbl-outline {
+      background: transparent;
+      color: var(--purple);
+      border: 1.5px solid var(--p30);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: var(--purple-deep);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+   
+
+    .hero-img-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 62%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.50;
+      /*  */
+    }
+
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70%;
+      background: linear-gradient(to bottom, transparent, var(--purple-deep));
+    }
+
+    .spin-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--purple-mid));
+      border: 2px solid var(--gold-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: spin-slow 14s linear infinite;
+      z-index: 6;
+      box-shadow: 0 0 16px rgba(107, 142, 35, 0.5);
+    }
+
+    .spin-badge span {
+      color: var(--gold);
+      font-size: 7px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    @keyframes spin-slow {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .hero-pill {
+      position: absolute;
+      top: 22px;
+      left: 16px;
+      background: var(--gold);
+      color: var(--gold-dark);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border-radius: 2px;
+      z-index: 6;
+    }
+
+    .hero-body {
+      position: relative;
+      z-index: 4;
+      padding: 28px 22px 100px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--g20);
+      border: 1px solid var(--g35);
+      border-radius: 2px;
+      padding: 5px 14px;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-h1 {
+      color: var(--cream);
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .hero-h1 .ul {
+      position: relative;
+      display: inline;
+    }
+
+    .hero-h1 .ul::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--purple-soft));
+      animation: grow-line 1.5s ease 0.3s both;
+    }
+
+    @keyframes grow-line {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    .hero-h1 .accent {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      color: var(--w70);
+      font-size: 15px;
+      line-height: 1.78;
+      margin-bottom: 26px;
+    }
+
+    .hero-sub strong {
+      color: var(--cream);
+    }
+
+    .fears {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .f-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--p10);
+      border-left: 3px solid var(--gold-deep);
+      padding: 12px 15px;
+      border-radius: 0 6px 6px 0;
+      color: var(--w70);
+      font-size: 14px;
+      opacity: 0;
+      transform: translateX(-22px);
+      animation: slide-in 0.6s ease both;
+    }
+
+    .f-item:nth-child(1) {
+      animation-delay: 0.2s
+    }
+
+    .f-item:nth-child(2) {
+      animation-delay: 0.4s
+    }
+
+    .f-item:nth-child(3) {
+      animation-delay: 0.6s
+    }
+
+    @keyframes slide-in {
+      to {
+        opacity: 1;
+        transform: translateX(0)
+      }
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      color: var(--gold-dark);
+      border: none;
+      padding: 18px 22px;
+      font-family: 'Halant', serif;
+      font-size: 19px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+      box-shadow: 0 6px 24px rgba(240, 220, 160, 0.35);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.28);
+      transform: skewX(-20deg);
+      animation: shimmer 2.8s infinite;
+    }
+
+    @keyframes shimmer {
+      to {
+        left: 130%
+      }
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
+    }
+
+    .hint {
+      text-align: center;
+      color: var(--w20);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 13px;
+      animation: bob 2s ease infinite;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(4px)
+      }
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+    }
+
+    /* PAIN */
+    .pain {
+      background: var(--purple-deep);
+      padding-bottom: 52px;
+    }
+
+    .pain-hero-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.55;
+      background: rgba(255, 255, 255, 0.06);
+
+    }
+
+    .pain-body {
+      padding: 30px 22px 0;
+    }
+
+    .pain-h2 {
+      color: var(--cream);
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 9px;
+    }
+
+    .pain-h2 span {
+      color: var(--gold);
+    }
+
+    .pain-intro {
+      color: var(--w70);
+      font-size: 20px;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 14px;
+      bottom: 14px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold-deep), var(--p30));
+    }
+
+    .t-item {
+      position: relative;
+      margin-bottom: 22px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s, transform 0.55s;
+    }
+
+    .t-item.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .t-item::before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--gold-deep);
+      border: 2.5px solid var(--purple-deep);
+      box-shadow: 0 0 0 2px var(--gold-deep);
+    }
+
+    .t-card {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(240, 220, 160, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .t-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .t-card-body {
+      padding: 14px 16px;
+    }
+
+    .t-card-body h4 {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .t-card-body p {
+      color: var(--w70);
+      font-size: 20px;
+      line-height: 1.65;
+    }
+
+    .pain-box {
+      margin-top: 28px;
+      padding: 18px 20px;
+      background: var(--p18);
+      border: 1px solid rgba(240, 220, 160, 0.22);
+      border-radius: 8px;
+      color: var(--cream);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .pain-box strong {
+      color: var(--gold);
+    }
+
+    /* PRODUCT */
+    .product {
+      background: var(--cream);
+    }
+
+    .product-top {
+      padding: 40px 22px 0;
+      text-align: center;
+    }
+
+    .product-h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .product-h2 em {
+      color: var(--purple);
+      font-style: normal;
+    }
+
+    .product-sub {
+      font-size: 18px;
+      color: var(--purple-mid);
+      line-height: 1.65;
+      margin-bottom: 30px;
+    }
+
+    .showcase {
+      background:
+        radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.28) 0%, transparent 35%),
+        radial-gradient(circle at 86% 15%, rgba(212, 181, 106, 0.40) 0%, transparent 40%),
+        linear-gradient(140deg, #3f5220 0%, #6b8e23 55%, #7c9440 100%);
+      padding: 50px 22px 60px;
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .showcase::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      pointer-events: none;
+    }
+
+    .prod-img-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .prod-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(212, 181, 106, 0.35);
+      animation: pulse 2.2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.88);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1.42);
+        opacity: 0;
+      }
+    }
+
+    .prod-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .bdg {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff6db;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+    }
+
+    .promise {
+      background: linear-gradient(145deg, #3f5220 0%, #556b2f 100%);
+      padding: 28px 22px 38px;
+    }
+
+    .related-media {
+      padding: 28px 18px 30px;
+      background: linear-gradient(155deg, #f8fbf0 0%, #f0f7e3 52%, #fdf5e7 100%);
+      border-top: 1px solid rgba(7, 59, 76, 0.10);
+      border-bottom: 1px solid rgba(7, 59, 76, 0.10);
+    }
+
+    .related-media h3 {
+      color: var(--purple-deep);
+      font-size: 26px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .related-points {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      justify-content: center;
+    }
+
+    .related-points li {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(7, 59, 76, 0.16);
+      background: #fff;
+    }
+
+    .related-points li:nth-child(odd) {
+      background: var(--teal-soft);
+    }
+
+    .related-points li:nth-child(even) {
+      background: var(--coral-soft);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .rel-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid rgba(7, 59, 76, 0.16);
+      box-shadow: 0 5px 16px rgba(7, 59, 76, 0.15);
+      min-height: 120px;
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    .rel-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .rel-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .rel-card:nth-child(4n+1)::before {
+      background: rgba(124, 148, 64, 0.18);
+    }
+
+    .rel-card:nth-child(4n+2)::before {
+      background: rgba(185, 139, 61, 0.16);
+    }
+
+    .rel-card:nth-child(4n+3)::before {
+      background: rgba(107, 142, 35, 0.16);
+    }
+
+    .rel-card:nth-child(4n+4)::before {
+      background: rgba(212, 181, 106, 0.20);
+    }
+
+    .rel-cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(to top, rgba(20, 15, 30, 0.84), rgba(20, 15, 30, 0));
+      letter-spacing: 0.4px;
+    }
+
+    .promise-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .promise-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--cream);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .promise-list li .ico {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--purple);
+      border: 1px solid var(--gold-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* HOW IT WORKS */
+    .how {
+      background: var(--cream);
+      padding: 52px 22px;
+    }
+
+    .how-hd {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .how-hd h2 {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      line-height: 1.3;
+    }
+
+    .msteps {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ms {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 152px;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+
+    .ms.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .ms:nth-child(even) {
+      direction: rtl;
+    }
+
+    .ms:nth-child(even)>* {
+      direction: ltr;
+    }
+
+    .ms-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 142px;
+
+    }
+
+    .ms-body {
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ms:nth-child(odd) .ms-body {
+      background: var(--purple-deep);
+    }
+
+    .ms:nth-child(even) .ms-body {
+      background: var(--purple);
+    }
+
+    .ms-n {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 2px;
+      color: rgba(240, 220, 160, 0.15);
+    }
+
+    .ms-t {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      color: var(--gold);
+    }
+
+    .ms-d {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--w70);
+    }
+
+    .how-box {
+      margin-top: 24px;
+      background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid));
+      border-radius: 8px;
+      padding: 20px 18px;
+      text-align: center;
+      color: var(--gold);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.55;
+      border: 1px solid rgba(240, 220, 160, 0.20);
+    }
+
+    /* AYURVEDA */
+    .ayur {
+      background: var(--purple-deep);
+      padding-bottom: 52px;
+    }
+
+    .ayur-top-img {
+      width: 100%;
+      height: 188px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.28;
+
+    }
+
+    .ayur-body {
+      padding: 28px 22px 0;
+    }
+
+    .ayur-h2 {
+      color: var(--cream);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+
+    .ayur-h2 span {
+      color: var(--gold);
+    }
+
+    .dosha-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin-bottom: 22px;
+    }
+
+    .dosha {
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.25s;
+      border: 1px solid rgba(240, 220, 160, 0.15);
+    }
+
+    .dosha:active {
+      transform: scale(0.97);
+    }
+
+    .dosha img {
+      width: 100%;
+      height: 108px;
+      object-fit: cover;
+      display: block;
+
+      transition: transform 0.4s;
+    }
+
+    .dosha:hover img {
+      transform: scale(1.08);
+    }
+
+    .dosha-lbl {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(60, 0, 100, 0.92), transparent);
+      padding: 22px 10px 9px;
+      color: var(--cream);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .dosha-lbl small {
+      display: block;
+      color: var(--g60);
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    .ayur-txt {
+      color: var(--w70);
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .ayur-txt strong {
+      color: var(--gold);
+    }
+
+    .formula-box {
+      background: var(--p18);
+      border: 1px solid rgba(240, 220, 160, 0.22);
+      border-radius: 8px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .formula-box p {
+      color: var(--cream);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .formula-box .plus {
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: 700;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .formula-box .result {
+      color: var(--gold);
+    }
+
+    /* COMPARISON */
+    .cmp {
+      background: var(--cream);
+      padding: 52px 22px;
+    }
+
+    .cmp-hd {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .cmp-hd h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--purple-deep);
+    }
+
+    table.ct {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(60, 0, 100, 0.10);
+    }
+
+    table.ct th {
+      padding: 16px 11px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    table.ct th:first-child {
+      background: var(--purple-deep);
+      color: var(--gold);
+      text-align: left;
+      padding-left: 14px;
+      width: 40%;
+    }
+
+    table.ct th:nth-child(2) {
+      background: var(--p30);
+      color: black;
+      width: 30%;
+    }
+
+    table.ct th:nth-child(3) {
+      background: var(--gold);
+      color: var(--gold-dark);
+      width: 30%;
+    }
+
+    table.ct td {
+      padding: 14px 11px;
+      font-size: 15px;
+      text-align: center;
+      border-bottom: 1px solid rgba(60, 0, 100, 0.07);
+    }
+
+    table.ct td:first-child {
+      text-align: left;
+      padding-left: 14px;
+      font-weight: 600;
+      color: var(--purple-deep);
+      background: rgba(250, 246, 238, 0.95);
+    }
+
+    table.ct td:nth-child(2) {
+      background: var(--p10);
+      color: var(--purple-mid);
+      font-weight: 600;
+    }
+
+    table.ct td:nth-child(3) {
+      background: rgba(240, 220, 160, 0.18);
+      color: var(--purple-deep);
+      font-weight: 700;
+    }
+
+    table.ct tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* INGREDIENTS */
+    .ingr {
+      background: var(--purple-deep);
+      padding-bottom: 52px;
+    }
+
+    .ingr-hd {
+      text-align: center;
+      padding: 52px 22px 28px;
+    }
+
+    .ingr-hd h2 {
+      color: var(--cream);
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .ingr-item {
+      display: flex;
+      align-items: stretch;
+      min-height: 126px;
+      opacity: 0;
+      transform: translateX(-18px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .ingr-item.vis {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .ingr-item:nth-child(even) {
+      flex-direction: row-reverse;
+      transform: translateX(18px);
+    }
+
+    .ingr-item:nth-child(even).vis {
+      transform: translateX(0);
+    }
+
+    .ingr-pic {
+      flex: 0 0 126px;
+      overflow: hidden;
+    }
+
+    .ingr-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      transition: transform 0.4s;
+    }
+
+    .ingr-item:hover .ingr-pic img {
+      transform: scale(1.07);
+    }
+
+    .ingr-txt {
+      flex: 1;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid rgba(240, 220, 160, 0.10);
+    }
+
+    .ingr-item:nth-child(odd) .ingr-txt {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .ingr-item:nth-child(even) .ingr-txt {
+      background: var(--p10);
+    }
+
+    .ingr-ico {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .ingr-name {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .ingr-ben {
+      color: var(--w70);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    /* HOW TO USE */
+    .use {
+      background: var(--cream);
+      padding: 52px 22px;
+    }
+
+    .use-hd {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .use-hd h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--purple-deep);
+    }
+
+    .use-card {
+      display: flex;
+      min-height: 116px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 13px;
+      box-shadow: 0 2px 12px rgba(60, 0, 100, 0.12);
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .use-card.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .use-pic {
+      width: 140px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .use-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+    }
+
+    .use-txt {
+      flex: 1;
+      background: var(--purple-deep);
+      padding: 14px 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sn {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--p18);
+      line-height: 1;
+    }
+
+    .st {
+      color: var(--gold);
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      margin-top: -4px;
+    }
+
+    .sd {
+      color: var(--w70);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* BEFORE AFTER */
+    .ba {
+      background: var(--purple-deep);
+      padding: 52px 0;
+    }
+
+    .ba-hd {
+      text-align: center;
+      padding: 0 22px 28px;
+    }
+
+    .ba-hd h2 {
+      color: var(--cream);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .ba-hd p {
+      color: var(--w40);
+      font-size: 13px;
+      margin-top: 7px;
+    }
+
+    .ba-wrap {
+      padding: 0 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .ba-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(240, 220, 160, 0.15);
+    }
+
+    .ba-imgs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 188px;
+      position: relative;
+    }
+
+    .ba-side {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ba-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+    }
+
+    .ba-lbl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .ba-lbl.b {
+      background: rgba(60, 0, 100, 0.85);
+      color: var(--cream);
+    }
+
+    .ba-lbl.a {
+      background: rgba(240, 220, 160, 0.88);
+      color: var(--gold-dark);
+    }
+
+    .ba-div {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--gold-deep);
+      z-index: 5;
+      transform: translateX(-50%);
+    }
+
+    .ba-div::before {
+      content: '↔';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--gold-deep);
+      color: var(--purple-deep);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .ba-info {
+      background: var(--p18);
+      padding: 14px 17px;
+      border-top: 2.5px solid var(--gold-deep);
+    }
+
+    .ba-info h4 {
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .ba-info p {
+      color: var(--w70);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* OFFER */
+    .offer {
+      background: linear-gradient(145deg, #465c24 0%, #6b8e23 45%, #8aa94a 100%);
+      padding: 52px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer::before {
+      content: '';
+      position: absolute;
+      top: -110px;
+      right: -120px;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      pointer-events: none;
+    }
+
+    .offer::after {
+      content: '';
+      position: absolute;
+      left: -90px;
+      bottom: -110px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(212, 181, 106, 0.22);
+      pointer-events: none;
+    }
+
+    .offer-shell {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 16px;
+    }
+
+    .offer-spot {
+      border-radius: 14px;
+      padding: 18px 16px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.93), rgba(245, 239, 222, 0.93));
+      border: 1px solid rgba(95, 71, 26, 0.22);
+      box-shadow: 0 10px 24px rgba(40, 55, 20, 0.22);
+    }
+
+    .offer-hd {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .offer-hd .fire {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(176, 141, 63, 0.25);
+      border: 1px solid rgba(95, 71, 26, 0.25);
+      border-radius: 999px;
+      padding: 6px 10px;
+      display: inline-block;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @keyframes shake {
+      from {
+        transform: rotate(-10deg)
+      }
+
+      to {
+        transform: rotate(10deg)
+      }
+    }
+
+    .offer-hd h2 {
+      color: var(--purple-deep);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .offer-lead {
+      color: var(--purple-mid);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .offer-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin-bottom: 4px;
+    }
+
+    .oc {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 10px;
+      padding: 12px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: #f8f6ee;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .oc:hover {
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .oc-ico {
+      width: 128px;
+      height: 128px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 0 0 3px rgba(212, 181, 106, 0.35);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .oc-ico:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 0 4px rgba(212, 181, 106, 0.55);
+    }
+
+    .oc-ico img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .oc-txt h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      color: #fff8e8;
+    }
+
+    .oc-txt p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .offer-imgs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+
+    .offer-imgs img {
+      flex: 1;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 7px;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+
+    }
+
+    .btn-offer {
+      width: 100%;
+      background: var(--purple-deep);
+      color: var(--gold);
+      border: none;
+      padding: 16px 20px;
+      font-family: 'Halant', serif;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+      box-shadow: 0 6px 20px rgba(60, 0, 100, 0.40);
+      animation: pulse-btn 2s ease infinite;
+    }
+
+    @keyframes pulse-btn {
+
+      0%,
+      100% {
+        box-shadow: 0 6px 20px rgba(60, 0, 100, 0.40);
+      }
+
+      50% {
+        box-shadow: 0 10px 30px rgba(60, 0, 100, 0.55);
+      }
+    }
+
+    .btn-offer:active {
+      transform: scale(0.97);
+    }
+
+    .btn-offer::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: rgba(240, 220, 160, 0.12);
+      transform: skewX(-20deg);
+      animation: shimmer 2s infinite;
+    }
+
+    .offer-note {
+      text-align: left;
+      color: rgba(95, 71, 26, 0.9);
+      font-size: 13px;
+      margin-top: 8px;
+      font-weight: 600;
+      opacity: 1;
+    }
+
+    @media (max-width: 420px) {
+      .offer-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ORDER */
+    .order {
+      background: var(--cream);
+      padding: 52px 22px;
+    }
+
+    .order-hd {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .order-hd h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--purple-deep);
+    }
+
+    .order-hd p {
+      color: var(--purple-mid);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .form-wrap {
+      background: #fff;
+      border-radius: 12px;
+      padding: 26px 20px;
+      box-shadow: 0 4px 22px rgba(60, 0, 100, 0.10);
+      position: relative;
+      border: 1px solid rgba(140, 40, 200, 0.12);
+    }
+
+    .fg {
+      margin-bottom: 17px;
+    }
+
+    .fg label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 7px;
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      width: 100%;
+      padding: 13px 15px;
+      font-family: 'Halant', serif;
+      font-size: 15px;
+      border: 2px solid rgba(140, 40, 200, 0.12);
+      border-radius: 6px;
+      background: var(--cream);
+      color: var(--purple-deep);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--purple);
+    }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      border: 2px solid rgba(140, 40, 200, 0.12);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .qb {
+      width: 48px;
+      height: 48px;
+      border: none;
+      background: var(--purple-deep);
+      color: var(--gold);
+      font-size: 22px;
+      cursor: pointer;
+      font-family: 'Halant', serif;
+      transition: background 0.2s;
+    }
+
+    .qb:hover {
+      background: var(--purple);
+    }
+
+    .qv {
+      flex: 1;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      background: var(--cream);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%);
+      color: var(--gold);
+      border: none;
+      padding: 17px 22px;
+      font-family: 'Halant', serif;
+      font-size: 19px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 16px rgba(140, 40, 200, 0.35);
+    }
+
+    .btn-submit:active {
+      transform: scale(0.97);
+    }
+
+    .loading {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: rgba(250, 246, 238, 0.94);
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    .loading.on {
+      display: flex;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid var(--p30);
+      border-top-color: var(--purple);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 28px;
+    }
+
+    .success.on {
+      display: block;
+    }
+
+    .success .tk {
+      font-size: 52px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .success h3 {
+      color: var(--purple-deep);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .success p {
+      color: var(--purple-mid);
+      font-size: 14px;
+    }
+
+    /* REVIEWS */
+    .rev {
+      background: var(--purple-deep);
+      padding: 52px 22px;
+    }
+
+    .rev-hd {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .rev-hd h2 {
+      color: var(--cream);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .rev-hd p {
+      color: var(--w40);
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .rev-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+
+    .rs {
+      text-align: center;
+      border-radius: 8px;
+      padding: 14px 7px;
+      background: var(--p18);
+      border: 1px solid rgba(240, 220, 160, 0.15);
+    }
+
+    .rs-n {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+
+    .rs-l {
+      font-size: 10px;
+      color: var(--w40);
+      letter-spacing: 0.5px;
+    }
+
+    .rev-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .rc {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(240, 220, 160, 0.14);
+      border-radius: 10px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .rc.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .rc-top {
+      display: flex;
+    }
+
+    .rc-img {
+      width: 96px;
+      flex-shrink: 0;
+    }
+
+    .rc-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 86px;
+
+    }
+
+    .rc-meta {
+      flex: 1;
+      padding: 13px;
+    }
+
+    .rc-name {
+      color: var(--cream);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .rc-stars {
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    .rc-tag {
+      color: var(--w40);
+      font-size: 14px;
+    }
+
+    .rc-txt {
+      padding: 12px 15px;
+      border-top: 1px solid rgba(240, 220, 160, 0.10);
+      color: var(--w70);
+      font-size: 18px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .rc-txt::before {
+      content: '"';
+      color: var(--gold);
+      font-size: 26px;
+      line-height: 0;
+      vertical-align: -11px;
+    }
+
+    /* CERTIFIED */
+    .cert {
+      background: var(--cream);
+      padding: 42px 22px;
+    }
+
+    .cert-hd {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .cert-hd h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--purple-deep);
+    }
+
+    .cert-img {
+      width: 100%;
+      height: 148px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 22px;
+      display: block;
+
+    }
+
+    .cert-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background: var(--cream);
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+      padding: 12px 14px;
+      min-width: 86px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .cb:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(140, 40, 200, 0.20);
+    }
+
+    .cb-ico {
+      font-size: 22px;
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12), 0 0 0 3px rgba(140, 40, 200, 0.18);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .cb-ico img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cb:hover .cb-ico {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16), 0 0 0 4px rgba(140, 40, 200, 0.35);
+    }
+
+    .cb-txt {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--purple-deep);
+      text-align: center;
+    }
+
+    /* FAQ */
+    .faq {
+      background: var(--purple-deep);
+      padding: 52px 22px;
+    }
+
+    .faq-hd {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .faq-hd h2 {
+      color: var(--cream);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .fi {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(240, 220, 160, 0.14);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .fq {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 15px 17px;
+      text-align: left;
+      font-family: 'Halant', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--cream);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 9px;
+      transition: background 0.2s;
+    }
+
+    .fq:hover {
+      background: var(--p10);
+    }
+
+    .fa-arr {
+      font-size: 17px;
+      color: var(--gold);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .fi.open .fa-arr {
+      transform: rotate(180deg);
+    }
+
+    .fa-ans {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      color: rgb(242, 246, 205);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .fi.open .fa-ans {
+      max-height: 200px;
+      padding: 0 17px 15px;
+    }
+
+    /* DISCLAIMER */
+    .disc {
+      background: var(--purple-deep);
+      padding: 26px 22px 36px;
+      border-top: 1px solid rgba(240, 220, 160, 0.12);
+    }
+
+    .disc h4 {
+      color: rgba(240, 220, 160, 0.35);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 10px;
+    }
+
+    .disc p {
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 11px;
+      line-height: 1.88;
+    }
+
+    /* STICKY */
+    .sticky {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 450px;
+      background: var(--purple-deep);
+      border-top: 2px solid var(--gold-deep);
+      padding: 11px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 100;
+      box-shadow: 0 -4px 18px rgba(60, 0, 100, 0.35);
+    }
+
+    .sticky-info {
+      flex: 1;
+    }
+
+    .sticky-info span {
+      display: block;
+      color: var(--w40);
+      font-size: 11px;
+    }
+
+    .sticky-info strong {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    .sticky-btn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: var(--gold-dark);
+      border: none;
+      padding: 11px 17px;
+      font-family: 'Halant', serif;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: opacity 0.2s;
+    }
+
+    .sticky-btn:hover {
+      opacity: 0.88;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- hook section -->
+    <section class="hero">
+    <img src="./Image/Hook.png" alt="">
+      
+    </section>
+
+    <section class="pain">
+      <div class="divider"></div>
+      <div class="pain-body">
+        <div class="lbl lbl-gold">समस्या की जड़</div>
+        <h2 class="pain-h2">⚠️ गाँठ क्यों बनती है?<br><span>असली कारण जानिए</span></h2>
+        <p class="pain-intro">शरीर में धीरे-धीरे कुछ ऐसे बदलाव होते हैं जो आगे चलकर गाँठ (granthi) का रूप ले लेते हैं:
+        </p>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-card"><img class="t-card-img" src="./Image/Pain1.png" alt="toxins">
+              <div class="t-card-body">
+                <h4>🧪 Toxin (Ama) जमा होना</h4>
+                <p>शरीर में toxin (Ama) जमा होना — यही गाँठ की शुरुआत होती है।</p>
+              </div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-card"><img class="t-card-img" src="./Image/Pain2.png" alt="digestion">
+              <div class="t-card-body">
+                <h4>🍽️ Weak Digestion</h4>
+                <p>गलत खान-पान और digestion weak होना शरीर के channels को block कर देता है।</p>
+              </div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-card"><img class="t-card-img" src="./Image/Pain4.png" alt="hormones">
+              <div class="t-card-body">
+                <h4>⚡ Hormonal Imbalance</h4>
+                <p>Hormonal imbalance से शरीर के tissues में असंतुलन आता है।</p>
+              </div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-card"><img class="t-card-img" src="./Image/Pain3.png" alt="inflammation">
+              <div class="t-card-body">
+                <h4>🔥 Inflammation & Blocked Channels</h4>
+                <p>सूजन और blocked channels मिलकर गाँठ का रूप ले लेते हैं।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pain-box">❌ <strong>और फिर हर कोई कहता है —</strong><br>"ऑपरेशन ही solution है"<br><br>👉 लेकिन क्या
+          सच में हर गाँठ का इलाज ऑपरेशन ही है?</div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="product-top">
+        <div class="lbl lbl-outline">Introducing</div>
+        <h2 class="product-h2">🌿 Gath Heal <em>Care</em></h2>
+        <p class="product-sub">100% Ayurvedic Support Formula — जो शरीर को अंदर से support करता है</p>
+      </div>
+      <div class="showcase">
+        <div class="prod-img-wrap"><img class="prod-img" src="./Image/Intro.png" alt="Gath Heal Care"></div>
+        <div class="badges">
+          <span class="bdg">✅ Ayurvedic</span>
+          <span class="bdg">🌿 100% Natural</span>
+          <span class="bdg">🔬 Quality Tested</span>
+          <span class="bdg">💊 Capsule Form</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="how-hd">
+        <div class="lbl lbl-purple">⚙️ Mechanism</div>
+        <h2>यह कैसे काम करता है?</h2>
+      </div>
+      <div class="msteps">
+        <div class="ms"><img class="ms-img" src="./Image/Improve1.png" alt="detox">
+          <div class="ms-body">
+            <div class="ms-n">01</div>
+            <div class="ms-t">Detox</div>
+            <p class="ms-d">शरीर में जमा toxins को बाहर निकालने में मदद करता है</p>
+          </div>
+        </div>
+        <div class="ms"><img class="ms-img" src="./Image/Improve2.png" alt="inflammation">
+          <div class="ms-body">
+            <div class="ms-n">02</div>
+            <div class="ms-t">Anti-Inflammatory</div>
+            <p class="ms-d">सूजन को कम करने में सहायक है</p>
+          </div>
+        </div>
+        <div class="ms"><img class="ms-img" src="./Image/Improve3.png" alt="circulation">
+          <div class="ms-body">
+            <div class="ms-n">03</div>
+            <div class="ms-t">Circulation</div>
+            <p class="ms-d">Blood circulation को improve करता है</p>
+          </div>
+        </div>
+        <div class="ms"><img class="ms-img" src="./Image/Improve4.png" alt="healing">
+          <div class="ms-body">
+            <div class="ms-n">04</div>
+            <div class="ms-t">Tissue Healing</div>
+            <p class="ms-d">Tissue balance और healing को support करता है</p>
+          </div>
+        </div>
+      </div>
+      <div class="how-box">👉 धीरे-धीरे शरीर खुद recovery की दिशा में काम करने लगता है</div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section class="ayur">
+      <div class="divider"></div>
+      <div class="ayur-body">
+        <div class="lbl lbl-gold">👨‍⚕️ Ayurvedic Science</div>
+        <h2 class="ayur-h2">Ayurveda के अनुसार<br><span>गाँठ का मुख्य कारण</span></h2>
+      
+        <p class="ayur-txt">Ayurveda के अनुसार, गाँठ (Granthi) का मुख्य कारण <strong>Kapha imbalance + Ama
+            (toxins)</strong> होता है।</p>
+        <div class="formula-box">
+           <img src="./Image/Doctor.png" width="100%"; height="100%"; style="border-radius: 5%;" alt="">
+        </div>
+        <p class="ayur-txt" style="margin-top:18px">Gath Heal Care इन दोनों factors को balance करने में सहायक है।</p>
+      </div>
+    </section>
+
+    <!-- Comparison section -->
+    <section class="cmp">
+      <div class="cmp-hd">
+        <div class="lbl lbl-purple">⚖️ तुलना</div>
+        <h2>Surgery vs Gath Heal Care</h2>
+      </div>
+      <table class="ct">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Surgery ❌</th>
+            <th>Gath Heal ✅</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Approach</td>
+            <td>External removal</td>
+            <td>Internal support</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>बहुत High</td>
+            <td>Affordable</td>
+          </tr>
+          <tr>
+            <td>Recovery</td>
+            <td>Time-taking</td>
+            <td>Natural process</td>
+          </tr>
+          <tr>
+            <td>Risk</td>
+            <td>Possible risks</td>
+            <td>Minimal</td>
+          </tr>
+          <tr>
+            <td>Focus</td>
+            <td>Symptom removal</td>
+            <td>Root cause support</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Ingredients section -->
+    <section class="ingr">
+      <div class="ingr-hd">
+        <div class="lbl lbl-gold">🌿 Key Ingredients</div>
+        <h2>Powerful Ayurvedic Ingredients</h2>
+      </div>
+      <div class="ingr-item">
+        <div class="ingr-pic"><img src="./Image/Ind1.png" alt="Kanchnar"></div>
+        <div class="ingr-txt">
+          <div class="ingr-ico">🌺</div>
+          <div class="ingr-name">कंचनार गुग्गुल</div>
+          <div class="ingr-ben">Gland support — thyroid और lymph glands को balance करने में सहायक</div>
+        </div>
+      </div>
+      <div class="ingr-item">
+        <div class="ingr-pic"><img src="./Image/Ind2.png" alt="Triphala"></div>
+        <div class="ingr-txt">
+          <div class="ingr-ico">🫐</div>
+          <div class="ingr-name">त्रिफला</div>
+          <div class="ingr-ben">Detox & digestion — पूरे शरीर को detox और पाचन को strong करता है</div>
+        </div>
+      </div>
+      <div class="ingr-item">
+        <div class="ingr-pic"><img src="./Image/Ind3.png" alt="Haldi"></div>
+        <div class="ingr-txt">
+          <div class="ingr-ico">💛</div>
+          <div class="ingr-name">हल्दी</div>
+          <div class="ingr-ben">Anti-inflammatory — सूजन को कम करने में अत्यंत प्रभावी</div>
+        </div>
+      </div>
+      <div class="ingr-item">
+        <div class="ingr-pic"><img src="./Image/Ind4.png" alt="Varun"></div>
+        <div class="ingr-txt">
+          <div class="ingr-ico">🌿</div>
+          <div class="ingr-name">वरुण</div>
+          <div class="ingr-ben">Abnormal growth support — tissue growth को control करने में सहायक</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use section -->
+    <section class="use">
+      <div class="use-hd">
+        <div class="lbl lbl-purple">🕒 Usage Guide</div>
+        <h2>कैसे use करें?</h2>
+      </div>
+      <div class="use-card">
+        <div class="use-pic"><img src="./Image/Product.avif" alt="capsule"></div>
+        <div class="use-txt">
+          <div class="sn">01</div>
+          <div class="st">💊 Daily Dose</div>
+          <div class="sd">रोजाना 1–2 capsule (doctor की सलाह अनुसार)</div>
+        </div>
+      </div>
+      <div class="use-card">
+        <div class="use-pic"><img src="./Image/How2.png" alt="water"></div>
+        <div class="use-txt">
+          <div class="sn">02</div>
+          <div class="st">🌡️ गुनगुने पानी से</div>
+          <div class="sd">गुनगुने पानी के साथ लें — absorption बेहतर होता है</div>
+        </div>
+      </div>
+      <div class="use-card">
+        <div class="use-pic"><img src="./Image/How3.png" alt="regular"></div>
+        <div class="use-txt">
+          <div class="sn">03</div>
+          <div class="st">📅 2-3 महीने नियमित</div>
+          <div class="sd">बेहतर results के लिए नियमित use करें</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After section  -->
+    <section class="ba">
+      <div class="ba-hd">
+        <div class="lbl lbl-gold">📸 Real Results</div>
+        <h2>Before & After</h2>
+        <p>Users के real experience</p>
+      </div>
+      <div class="ba-wrap">
+        <div class="ba-card">
+          <div class="ba-imgs">
+            <div class="ba-side"><img src="./Image/Before1.png" alt="Before">
+              <div class="ba-lbl b">Before ❌</div>
+            </div>
+            <div class="ba-div"></div>
+            <div class="ba-side"><img src="./Image/After1.png" alt="After">
+              <div class="ba-lbl a">After ✅</div>
+            </div>
+          </div>
+          <div class="ba-info">
+            <h4>सूजन में कमी</h4>
+            <p>Inflammation और discomfort में notable कमी।</p>
+          </div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-imgs">
+            <div class="ba-side"><img src="./Image/Before2.png" alt="Before 2">
+              <div class="ba-lbl b">Before ❌</div>
+            </div>
+            <div class="ba-div"></div>
+            <div class="ba-side"><img src="./Image/After2.png" alt="After 2">
+              <div class="ba-lbl a">After ✅</div>
+            </div>
+          </div>
+          <div class="ba-info">
+            <h4>Size में फर्क</h4>
+            <p>Size में फर्क दिखा और discomfort कम हुआ।</p>
+          </div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-imgs">
+            <div class="ba-side"><img src="./Image/Before3.png" alt="Before 3">
+              <div class="ba-lbl b">Before ❌</div>
+            </div>
+            <div class="ba-div"></div>
+            <div class="ba-side"><img src="./Image/After3.png" alt="After 3">
+              <div class="ba-lbl a">After ✅</div>
+            </div>
+          </div>
+          <div class="ba-info">
+            <h4>Natural Recovery</h4>
+            <p>बिना surgery के relief का अनुभव।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate -->
+    <section class="cert">
+      <div class="cert-hd">
+        <div class="lbl lbl-deep">🛡️ Certified</div>
+        <h2>Certified & Trusted</h2>
+      </div>
+      <!-- <img class="cert-img" src="./Image/Product.avif" alt="certification"> -->
+      <div class="cert-badges">
+        <div class="cb">
+          <div class="cb-ico"> <img src="./Image/Trust1.png" alt="Free Delivery">
+          </div>
+          <div class="cb-txt">Ayurvedic<br>Formulation</div>
+        </div>
+        <div class="cb">
+          <div class="cb-ico"> <img src="./Image/Trust2.png" alt="Free Delivery">
+          </div>
+          <div class="cb-txt">Quality<br>Tested</div>
+        </div>
+        <div class="cb">
+          <div class="cb-ico"> <img src="./Image/Trust3.png" alt="Free Delivery">
+          </div>
+          <div class="cb-txt">Trusted<br>Users</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer section -->
+    <section class="offer">
+      <div class="offer-shell">
+        <div class="offer-spot">
+          <div class="offer-hd"><span class="fire">🔥 Fast Moving Offer</span>
+            <h2>Limited Time Combo<br>आज ही Order करें!</h2>
+            <p class="offer-lead">Gath Heal Care का special pack अभी discounted price पर available है।</p>
+          </div>
+          <button class="btn-offer" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">👉
+            आज ही Gath Heal Care शुरू करें</button>
+          <p class="offer-note">⏰ Limited stock - delay न करें</p>
+        </div>
+
+        <div class="offer-cards">
+          <div class="oc">
+            <div class="oc-ico"><img src="./Image/Offer1.png" alt="Free Delivery"></div>
+            <div class="oc-txt">
+              <h4>Free Delivery</h4>
+              <p>पूरे India में FREE Delivery</p>
+            </div>
+          </div>
+          <div class="oc">
+            <div class="oc-ico"><img src="./Image/Offer2.png" alt="Free Diet Chart"></div>
+            <div class="oc-txt">
+              <h4>Free Diet Chart</h4>
+              <p>Expert द्वारा बनाया गया diet chart FREE</p>
+            </div>
+          </div>
+          <div class="oc">
+            <div class="oc-ico"><img src="./Image/Offer3.png" alt="Cash on Delivery"></div>
+            <div class="oc-txt">
+              <h4>Cash on Delivery</h4>
+              <p>पहले product receive करें, फिर payment</p>
+            </div>
+          </div>
+          <div class="oc">
+            <div class="oc-ico"><img src="./Image/Offer4.png" alt="10% Extra Discount"></div>
+            <div class="oc-txt">
+              <h4>10% Extra Discount</h4>
+              <p>आज के order पर instant benefit</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="offer-imgs"><img src="./Image/Product.avif" alt="p1"><img src="./Image/Product.avif" alt="p2"><img -->
+        <!-- src="./Image/Product.avif" alt="p3"></div> -->
+      </div>
+    </section>
+
+    <!-- order section -->
+    <section class="order" id="order">
+      <div class="order-hd">
+        <div class="lbl lbl-deep">📝 Order Now</div>
+        <h2>अभी Order करें</h2>
+        <p>Easy order | Fast delivery | COD Available</p>
+      </div>
+      <div class="form-wrap" id="fw">
+        <div class="loading" id="lo">
+          <div class="spinner"></div>
+        </div>
+        <div id="fc">
+          <div class="fg"><label>पूरा नाम *</label><input type="text" id="fn" placeholder="आपका नाम लिखें"></div>
+          <div class="fg"><label>Phone Number *</label><input type="tel" id="fp" placeholder="10 digit mobile number"
+              maxlength="10"></div>
+          <button class="btn-submit" onclick="sub()">🛒 Order Confirm करें (COD)</button>
+        </div>
+        <div class="success" id="sm"><span class="tk">✅</span>
+          <h3>Order Successfully Place हो गया!</h3>
+          <p>हमारी team जल्द आपसे contact करेगी। COD delivery 3-5 days में होगी।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section -->
+    <section class="rev">
+      <div class="rev-hd">
+        <div class="lbl lbl-gold">⭐ Customer Reviews</div>
+        <h2>Real Customer Results</h2>
+        <p>उन्होंने use किया, उन्होंने share किया</p>
+      </div>
+      <div class="rev-stats">
+        <div class="rs"><span class="rs-n">4.8★</span><span class="rs-l">Rating</span></div>
+        <div class="rs"><span class="rs-n">75,000+</span><span class="rs-l">Users</span></div>
+        <div class="rs"><span class="rs-n">100%</span><span class="rs-l">Satisfied</span></div>
+      </div>
+      <div class="rev-cards">
+        <div class="rc">
+          <div class="rc-top">
+            <div class="rc-img"><img src="./Image/Client1.png" alt="r1"></div>
+            <div class="rc-meta">
+              <div class="rc-name">Sunita Sharma</div>
+              <div class="rc-stars">★★★★★</div>
+              <div class="rc-tag">📍 Jaipur, Rajasthan</div>
+            </div>
+          </div>
+          <div class="rc-txt">मुझे surgery से बहुत डर लग रहा था… Gath Heal use करने के बाद improvement महसूस हुआ।</div>
+        </div>
+        <div class="rc">
+          <div class="rc-top">
+            <div class="rc-img"><img src="./Image/Client2.png" alt="r2"></div>
+            <div class="rc-meta">
+              <div class="rc-name">Ramesh Verma</div>
+              <div class="rc-stars">★★★★★</div>
+              <div class="rc-tag">📍 Lucknow, UP</div>
+            </div>
+          </div>
+          <div class="rc-txt">Size में फर्क दिखा और discomfort कम हुआ। Result से खुश हूँ।</div>
+        </div>
+        <div class="rc">
+          <div class="rc-top">
+            <div class="rc-img"><img src="./Image/Client3.png" alt="r3"></div>
+            <div class="rc-meta">
+              <div class="rc-name">Priya Gupta</div>
+              <div class="rc-stars">★★★★☆</div>
+              <div class="rc-tag">📍 Bhopal, MP</div>
+            </div>
+          </div>
+          <div class="rc-txt">Natural option मिला, यही सबसे अच्छा लगा। 2 महीने में noticeable changes आए।</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="faq">
+      <div class="faq-hd">
+        <div class="lbl lbl-gold">❓ FAQ</div>
+        <h2>अक्सर पूछे जाने वाले सवाल</h2>
+      </div>
+      <div class="faq-list">
+        <div class="fi"><button class="fq" onclick="tf(this)">Q1. क्या यह हर तरह की गाँठ में काम करता है?<span
+              class="fa-arr">▼</span></button>
+          <div class="fa-ans">यह product support प्रदान करता है, result व्यक्ति अनुसार अलग हो सकता है।</div>
+        </div>
+        <div class="fi"><button class="fq" onclick="tf(this)">Q2. कितने समय में असर दिखता है?<span
+              class="fa-arr">▼</span></button>
+          <div class="fa-ans">4–8 हफ्तों में noticeable changes दिख सकते हैं।</div>
+        </div>
+        <div class="fi"><button class="fq" onclick="tf(this)">Q3. क्या यह safe है?<span class="fa-arr">▼</span></button>
+          <div class="fa-ans">Ayurvedic ingredients पर आधारित है। Doctor सलाह बेहतर है।</div>
+        </div>
+        <div class="fi"><button class="fq" onclick="tf(this)">Q4. क्या operation avoid हो सकता है?<span
+              class="fa-arr">▼</span></button>
+          <div class="fa-ans">Severe cases में doctor की सलाह आवश्यक है।</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- disclaimer section -->
+    <section class="disc">
+      <h4>⚠️ Important Disclaimer</h4>
+      <p>यह product किसी भी disease को diagnose, treat, cure या prevent करने का दावा नहीं करता। यह information
+        educational purposes के लिए है। Results vary कर सकते हैं।</p>
+    </section>
+
+    <!-- cta -->
+    <div class="sticky">
+      <div class="sticky-info"><span>🚚 Free Delivery + COD Available</span><strong>Gath Heal Care — 10% OFF आज</strong>
+      </div>
+      <button class="sticky-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order
+        Now</button>
+    </div>
+
+    <script>
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.12 });
+      document.querySelectorAll('.t-item,.ms,.ingr-item,.use-card,.rc').forEach(el => io.observe(el));
+      function tf(btn) { const fi = btn.parentElement, open = fi.classList.contains('open'); document.querySelectorAll('.fi').forEach(i => i.classList.remove('open')); if (!open) fi.classList.add('open'); }
+      let q = 1;
+      function cq(d) { q = Math.max(1, Math.min(10, q + d)); document.getElementById('qd').textContent = q; }
+      function sub() {
+        const n = document.getElementById('fn').value.trim();
+        const p = document.getElementById('fp').value.trim();
+        const a = document.getElementById('fa').value.trim();
+        if (!n || !p || !a) { alert('कृपया सभी required fields भरें।'); return; }
+        if (p.length !== 10 || isNaN(p)) { alert('कृपया valid 10-digit phone number डालें।'); return; }
+        document.getElementById('lo').classList.add('on');
+        setTimeout(() => { document.getElementById('lo').classList.remove('on'); document.getElementById('fc').style.display = 'none'; document.getElementById('sm').classList.add('on'); }, 2200);
+      }
+    </script>
+  </div>
+</body>
+
+</html>
