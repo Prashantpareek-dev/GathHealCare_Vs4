@@ -94,7 +94,7 @@
     /* HERO */
     .hero {
       position: relative;
-      height: 80vh;
+      /* height: 100%; */
       background: var(--purple-deep);
       overflow: hidden;
       display: flex;
@@ -102,7 +102,7 @@
       justify-content: flex-end;
     }
 
-   
+
 
     .hero-img-wrap {
       position: absolute;
@@ -2141,8 +2141,8 @@
   <div class="page">
     <!-- hook section -->
     <section class="hero">
-    <img src="./Image/Hook.png" alt="">
-      
+      <img src="./Image/Hook.png" alt="">
+
     </section>
 
     <section class="pain">
@@ -2252,11 +2252,11 @@
       <div class="ayur-body">
         <div class="lbl lbl-gold">👨‍⚕️ Ayurvedic Science</div>
         <h2 class="ayur-h2">Ayurveda के अनुसार<br><span>गाँठ का मुख्य कारण</span></h2>
-      
+
         <p class="ayur-txt">Ayurveda के अनुसार, गाँठ (Granthi) का मुख्य कारण <strong>Kapha imbalance + Ama
             (toxins)</strong> होता है।</p>
         <div class="formula-box">
-           <img src="./Image/Doctor.png" width="100%"; height="100%"; style="border-radius: 5%;" alt="">
+          <img src="./Image/Doctor.png" width="100%" ; height="100%" ; style="border-radius: 5%;" alt="">
         </div>
         <p class="ayur-txt" style="margin-top:18px">Gath Heal Care इन दोनों factors को balance करने में सहायक है।</p>
       </div>
@@ -2510,29 +2510,75 @@
     </section>
 
     <!-- order section -->
-    <section class="order" id="order">
-      <div class="order-hd">
-        <div class="lbl lbl-deep">📝 Order Now</div>
-        <h2>अभी Order करें</h2>
-        <p>Easy order | Fast delivery | COD Available</p>
-      </div>
-      <div class="form-wrap" id="fw">
-        <div class="loading" id="lo">
-          <div class="spinner"></div>
-        </div>
-        <div id="fc">
-          <div class="fg"><label>पूरा नाम *</label><input type="text" id="fn" placeholder="आपका नाम लिखें"></div>
-          <div class="fg"><label>Phone Number *</label><input type="tel" id="fp" placeholder="10 digit mobile number"
-              maxlength="10"></div>
-          <button class="btn-submit" onclick="sub()">🛒 Order Confirm करें (COD)</button>
-        </div>
-        <div class="success" id="sm"><span class="tk">✅</span>
-          <h3>Order Successfully Place हो गया!</h3>
-          <p>हमारी team जल्द आपसे contact करेगी। COD delivery 3-5 days में होगी।</p>
-        </div>
-      </div>
-    </section>
+    <html>
 
+    <head>
+      <script>
+        function submitForm(event) {
+          event.preventDefault();
+
+
+
+          const formData = new FormData(event.target);
+          let redirected = false;
+
+          const redirectToThankYou = () => {
+            if (!redirected) {
+              redirected = true;
+              window.location.href = './ThankYou.html';
+            }
+          };
+
+          sub()
+          const timeout = setTimeout(redirectToThankYou, 2000);
+
+          fetch('https://script.google.com/macros/s/AKfycbxnMuCrcwfsopbyXWRdPKj_4qYlJEaAl1dUNJDOock5uw9XVCUdt8nFDOcmDjmiWIS7/exec', {
+            method: 'POST',
+            body: formData
+          }).then(response => response.text())
+            .then(() => {
+              clearTimeout(timeout);
+              redirectToThankYou();
+            }).catch(error => {
+              console.error('Error:', error);
+              clearTimeout(timeout);
+              redirectToThankYou();
+            });
+
+          return false;
+        }
+      </script>
+    </head>
+
+    <body>
+      <section class="order" id="order">
+        <div class="order-hd">
+          <div class="lbl lbl-deep">📝 Order Now</div>
+          <h2>अभी Order करें</h2>
+          <p>Easy order | Fast delivery | COD Available</p>
+        </div>
+        <div class="form-wrap" id="fw">
+          <div class="loading" id="lo">
+            <div class="spinner"></div>
+          </div>
+          <form onsubmit="submitForm(event)">
+            <div id="fc">
+              <div class="fg"><label>पूरा नाम *</label><input type="text" required name="name" id="fn"
+                  placeholder="आपका नाम लिखें"></div>
+              <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" pattern="[6-9][0-9]{9}"
+                  required maxlength="10" id="fp" placeholder="10 digit mobile number"></div>
+              <button class="btn-submit" type="submit">🛒 Order Confirm करें (COD)</button>
+            </div>
+          </form>
+          <div class="success" id="sm"><span class="tk">✅</span>
+            <h3>Order Successfully Place हो गया!</h3>
+            <p>हमारी team जल्द आपसे contact करेगी। COD delivery 3-5 days में होगी।</p>
+          </div>
+        </div>
+      </section>
+    </body>
+
+    </html>
     <!-- review section -->
     <section class="rev">
       <div class="rev-hd">
@@ -2631,8 +2677,7 @@
       function sub() {
         const n = document.getElementById('fn').value.trim();
         const p = document.getElementById('fp').value.trim();
-        const a = document.getElementById('fa').value.trim();
-        if (!n || !p || !a) { alert('कृपया सभी required fields भरें।'); return; }
+        if (!n || !p) { alert('कृपया सभी required fields भरें।'); return; }
         if (p.length !== 10 || isNaN(p)) { alert('कृपया valid 10-digit phone number डालें।'); return; }
         document.getElementById('lo').classList.add('on');
         setTimeout(() => { document.getElementById('lo').classList.remove('on'); document.getElementById('fc').style.display = 'none'; document.getElementById('sm').classList.add('on'); }, 2200);
