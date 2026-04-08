@@ -65,7 +65,7 @@
         .sticky-bar {
             max-width: 450px;
             left: 50%;
-            transform: translateX(-50%);
+            /* transform: translateX(0%); */
         }
 
         /* ─── NOISE OVERLAY ─── */
@@ -1998,7 +1998,7 @@
 
         /* ─── STICKY BAR ─── */
         .sticky-bar {
-            position: fixed;
+            position: sticky;
             bottom: 0;
             left: 0;
             right: 0;
@@ -2006,13 +2006,14 @@
             border-top: 1px solid rgba(245, 239, 228, 0.08);
             padding: 12px 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 14px;
+            gap: 6px;
             z-index: 999;
         }
 
         .sticky-info {
-            flex: 1;
+            text-align: center;
         }
 
         .sticky-info span {
@@ -2034,14 +2035,15 @@
             background: var(--terra);
             color: var(--cream);
             border: none;
-            padding: 11px 20px;
+            padding: 11px 0;
+            width: 100%;
             font-family: 'Cormorant Garamond', serif;
             font-size: 15px;
             font-weight: 600;
             border-radius: var(--r2);
             cursor: pointer;
-            flex-shrink: 0;
             transition: background 0.2s;
+            text-align: center;
         }
 
         .sticky-cta:hover {
