@@ -85,26 +85,21 @@
 
         /* ─── HERO ─── */
         .hero {
-            height: 60vh;
             background: var(--ink);
-            position: relative;
             overflow: hidden;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
         }
 
         .hero-bg {
-            position: absolute;
-            inset: 0;
+            display: block;
+            width: 100%;
+            line-height: 0;
         }
 
         .hero-bg img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            display: block;
             object-fit: cover;
-            /* opacity: 0.38; */
-            transform-origin: center bottom;
-            /* animation: heroScale 14s ease-out forwards; */
         }
 
         @keyframes heroScale {
@@ -2082,7 +2077,6 @@
         <div class="hero-bg">
             <img src="./Image/Hook.png" alt="" fetchpriority="high">
         </div>
-
     </section>
 
     <!-- TICKER -->
