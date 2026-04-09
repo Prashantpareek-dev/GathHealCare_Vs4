@@ -470,7 +470,7 @@
 
         .pain-grid {
             display: grid;
-            gap: 2px;
+            gap: 10px;
             margin-top: 36px;
         }
 
@@ -722,8 +722,8 @@
         }
 
         .prod-card-sub {
-            font-size: 12px;
-            color: var(--muted);
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.804);
             margin-bottom: 16px;
         }
 
@@ -734,7 +734,7 @@
         }
 
         .ptag {
-            font-size: 9px;
+            font-size: 20px;
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -1215,19 +1215,22 @@
             overflow: hidden;
             border: 1px solid var(--border);
             display: grid;
+            
             grid-template-columns: 100px 1fr;
         }
 
         .usage-card-img {
             overflow: hidden;
+            
         }
 
         .usage-card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            min-height: 150px;
             display: block;
-            min-height: 90px;
+           
             filter: saturate(0.7);
         }
 
@@ -1457,9 +1460,10 @@
 
         .perk-img {
             width: 100%;
-            height: 80px;
+            height: 180px;
             object-fit: contain;
             display: block;
+            border-radius: 15%;
             background: var(--paper3);
             padding: 10px;
         }
@@ -1469,14 +1473,14 @@
         }
 
         .perk-title {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
             color: var(--ink);
             margin-bottom: 1px;
         }
 
         .perk-sub {
-            font-size: 10px;
+            font-size: 12px;
             color: var(--muted);
         }
 
@@ -1871,8 +1875,8 @@
         }
 
         .trust-badge-icon {
-            width: 60px;
-            height: 60px;
+            width: 160px;
+            height: 160px;
             border-radius: var(--r2);
             background: var(--paper);
             overflow: hidden;
@@ -1882,13 +1886,13 @@
         }
 
         .trust-badge-icon img {
-            width: 44px;
-            height: 44px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
         .trust-badge-label {
-            font-size: 10px;
+            font-size: 26px;
             font-weight: 500;
             color: rgba(245, 239, 228, 0.55);
             text-align: center;
@@ -2055,82 +2059,358 @@
         }
 
         /* ─── FONT SCALE (+1 step) ─── */
-        body { font-size: 15px; }
-        .ticker-item { font-size: 11px; font-weight: 600; }
-        .eyebrow-text { font-size: 10px; font-weight: 600; }
-        .section-title { font-size: clamp(42px, 11vw, 57px); font-weight: 400; }
-        .section-title em { font-weight: 400; }
-        .section-sub { font-size: 16px; font-weight: 400; }
-        .hero-h1 { font-size: clamp(62px, 15vw, 88px); font-weight: 400; }
-        .hero-h1 .accent { font-weight: 400; }
-        .hero-desc { font-size: 16px; font-weight: 400; }
-        .hero-pill-item { font-size: 14px; }
-        .hero-tag-text { font-size: 10px; font-weight: 600; }
-        .nav-brand { font-size: 19px; font-weight: 700; }
-        .nav-badge { font-size: 10px; font-weight: 600; }
-        .pain-num { font-size: 9px; font-weight: 600; }
-        .pain-name { font-size: 21px; font-weight: 700; }
-        .pain-desc { font-size: 14px; }
-        .pain-callout p { font-size: 23px; font-weight: 400; }
-        .pain-callout span { font-size: 12px; }
-        .prod-card-name { font-size: 30px; font-weight: 700; }
-        .prod-card-sub { font-size: 14px; }
-        .ptag { font-size: 10px; font-weight: 600; }
-        .step-n { font-size: 46px; font-weight: 400; }
-        .step-t { font-size: 19px; font-weight: 700; }
-        .step-d { font-size: 13px; }
-        .how-note p { font-size: 20px; font-weight: 400; }
-        .ayur-text { font-size: 17px; font-weight: 400; }
-        .formula-box h4 { font-size: 18px; font-weight: 700; }
-        .formula-box p { font-size: 13px; }
-        .formula-op { font-size: 30px; font-weight: 400; }
-        .cmp-hcell { font-size: 10px; font-weight: 600; }
-        .cmp-cell { font-size: 13px; font-weight: 500; }
-        .cmp-cell.bad { font-size: 12px; }
-        .cmp-cell.good { font-size: 12px; font-weight: 600; }
-        .ingr-idx { font-size: 9px; font-weight: 600; }
-        .ingr-name { font-size: 23px; font-weight: 700; }
-        .ingr-benefit { font-size: 14px; }
-        .usage-step-circle span { font-size: 17px; font-weight: 700; }
-        .usage-step-title { font-size: 19px; font-weight: 700; }
-        .usage-step-desc { font-size: 14px; }
-        .ba-label { font-size: 9px; font-weight: 600; }
-        .ba-caption h4 { font-size: 17px; font-weight: 700; }
-        .ba-caption p { font-size: 13px; }
-        .offer-badge { font-size: 10px; font-weight: 600; }
-        .offer-h2 { font-size: 44px; font-weight: 400; }
-        .offer-h2 em { font-weight: 400; }
-        .offer-sub { font-size: 15px; }
-        .perk-title { font-size: 14px; font-weight: 600; }
-        .perk-sub { font-size: 11px; }
-        .btn-offer { font-size: 22px; font-weight: 700; }
-        .btn-offer .arr { font-size: 26px; }
-        .offer-footnote { font-size: 12px; }
-        .fg label { font-size: 10px; font-weight: 600; }
-        .fg input { font-size: 16px; }
-        .btn-submit { font-size: 21px; font-weight: 700; }
-        .success-icon { font-size: 23px; }
-        .success-title { font-size: 28px; font-weight: 700; }
-        .success-text { font-size: 15px; }
-        .rstat-num { font-size: 28px; font-weight: 700; }
-        .rstat-lbl { font-size: 10px; font-weight: 600; }
-        .review-name { font-size: 18px; font-weight: 700; }
-        .review-stars { font-size: 13px; }
-        .review-location { font-size: 11px; }
-        .review-quote { font-size: 18px; font-weight: 400; }
-        .review-quote::before { font-size: 30px; }
-        .trust-badge-label { font-size: 11px; font-weight: 600; }
-        .faq-q { font-size: 19px; font-weight: 700; }
-        .faq-arrow { font-size: 12px; }
-        .faq-a { font-size: 15px; }
-        .disclaimer h4 { font-size: 9px; }
-        .disclaimer p { font-size: 12px; }
-        .sticky-info span { font-size: 10px; }
-        .sticky-info strong { font-size: 16px; font-weight: 700; }
-        .sticky-cta { font-size: 16px; font-weight: 700; }
-        .btn-primary { font-size: 20px; font-weight: 700; }
-        .btn-primary .arr { font-size: 23px; }
-        .btn-scroll { font-size: 21px; }
+        body {
+            font-size: 15px;
+        }
+
+        .ticker-item {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .eyebrow-text {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: clamp(42px, 11vw, 57px);
+            font-weight: 400;
+        }
+
+        .section-title em {
+            font-weight: 400;
+        }
+
+        .section-sub {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgb(44, 37, 37);
+        }
+
+        .hero-h1 {
+            font-size: clamp(62px, 15vw, 88px);
+            font-weight: 400;
+        }
+
+        .hero-h1 .accent {
+            font-weight: 400;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .hero-pill-item {
+            font-size: 14px;
+        }
+
+        .hero-tag-text {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .nav-brand {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .nav-badge {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .pain-num {
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .pain-name {
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .pain-desc {
+            font-size: 14px;
+        }
+
+        .pain-callout p {
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        .pain-callout span {
+            font-size: 18px;
+        }
+
+        .prod-card-name {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .prod-card-sub {
+            font-size: 14px;
+        }
+
+        .ptag {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .step-n {
+            font-size: 46px;
+            font-weight: 400;
+        }
+
+        .step-t {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .step-d {
+            font-size: 20px;
+            color: #3c2d2d;
+        }
+
+        .how-note p {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .ayur-text {
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .formula-box h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .formula-box p {
+            font-size: 13px;
+        }
+
+        .formula-op {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        .cmp-hcell {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .cmp-cell {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .cmp-cell.bad {
+            font-size: 14px;
+        }
+
+        .cmp-cell.good {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .ingr-idx {
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .ingr-name {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        .ingr-benefit {
+            font-size: 17px;
+            color: rgba(0, 0, 0, 0.771);
+        }
+
+        .usage-step-circle span {
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .usage-step-title {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .usage-step-desc {
+            font-size: 14px;
+        }
+
+        .ba-label {
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .ba-caption h4 {
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .ba-caption p {
+            font-size: 13px;
+        }
+
+        .offer-badge {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .offer-h2 {
+            font-size: 44px;
+            font-weight: 400;
+        }
+
+        .offer-h2 em {
+            font-weight: 400;
+        }
+
+        .offer-sub {
+            font-size: 15px;
+        }
+
+        .perk-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .perk-sub {
+            font-size: 14px;
+        }
+
+        .btn-offer {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .btn-offer .arr {
+            font-size: 26px;
+        }
+
+        .offer-footnote {
+            font-size: 14px;
+             color: #000;
+        }
+
+        .fg label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .fg input {
+            font-size: 16px;
+        }
+
+        .btn-submit {
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .success-icon {
+            font-size: 23px;
+        }
+
+        .success-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .success-text {
+            font-size: 15px;
+        }
+
+        .rstat-num {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .rstat-lbl {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .review-name {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .review-stars {
+            font-size: 13px;
+        }
+
+        .review-location {
+            font-size: 11px;
+        }
+
+        .review-quote {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .review-quote::before {
+            font-size: 30px;
+        }
+
+        .trust-badge-label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .faq-q {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .faq-arrow {
+            font-size: 12px;
+        }
+
+        .faq-a {
+            font-size: 15px;
+        }
+
+        .disclaimer h4 {
+            font-size: 9px;
+        }
+
+        .disclaimer p {
+            font-size: 12px;
+        }
+
+        .sticky-info span {
+            font-size: 10px;
+        }
+
+        .sticky-info strong {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .sticky-cta {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .btn-primary .arr {
+            font-size: 23px;
+        }
+
+        .btn-scroll {
+            font-size: 21px;
+        }
 
         /* ─── MEDIA ─── */
         @media (max-width: 380px) {
@@ -2186,7 +2466,7 @@
             <div class="pain-grid">
                 <div class="pain-card">
                     <div class="pain-card-inner">
-                        <div class="pain-card-img"><img src="./Image/Pain3.avif" alt="toxins" loading="lazy"></div>
+                        <div class="pain-card-img"><img src="./Image/Pain4.avif" alt="toxins" loading="lazy"></div>
                         <div class="pain-card-body">
                             <div class="pain-num">01 — Cause</div>
                             <div class="pain-name serif">Toxin जमा होना</div>
@@ -2196,7 +2476,7 @@
                 </div>
                 <div class="pain-card">
                     <div class="pain-card-inner">
-                        <div class="pain-card-img"><img src="./Image/Pain4.avif" alt="digestion" loading="lazy"></div>
+                        <div class="pain-card-img"><img src="./Image/Pain3.avif" alt="digestion" loading="lazy"></div>
                         <div class="pain-card-body">
                             <div class="pain-num">02</div>
                             <div class="pain-name serif">Weak Digestion</div>
@@ -2509,11 +2789,11 @@
             <div class="ba-panels">
                 <div class="ba-panel">
                     <div class="ba-images">
-                        <div class="ba-img-side"><img src="./Image/Before1.avif" alt="Before" loading="lazy">
+                        <div class="ba-img-side"><img src="./Image/Before3.avif" alt="Before" loading="lazy">
                             <div class="ba-label before">Before</div>
                         </div>
                         <div class="ba-divider"></div>
-                        <div class="ba-img-side"><img src="./Image/After1.avif" alt="After" loading="lazy">
+                        <div class="ba-img-side"><img src="./Image/After3.avif" alt="After" loading="lazy">
                             <div class="ba-label after">After</div>
                         </div>
                     </div>
@@ -2539,11 +2819,11 @@
                 </div>
                 <div class="ba-panel">
                     <div class="ba-images">
-                        <div class="ba-img-side"><img src="./Image/Before3.avif" alt="Before 3" loading="lazy">
+                        <div class="ba-img-side"><img src="./Image/Before1.avif" alt="Before 3" loading="lazy">
                             <div class="ba-label before">Before</div>
                         </div>
                         <div class="ba-divider"></div>
-                        <div class="ba-img-side"><img src="./Image/After3.avif" alt="After 3" loading="lazy">
+                        <div class="ba-img-side"><img src="./Image/After1.avif" alt="After 3" loading="lazy">
                             <div class="ba-label after">After</div>
                         </div>
                     </div>
@@ -2551,6 +2831,32 @@
                         <h4 class="serif">Natural Recovery</h4>
                         <p>बिना surgery के relief का अनुभव।</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust section">
+        <div class="section-inner">
+            <div class="eyebrow" style="justify-content:center">
+                <span class="eyebrow-dash"></span>
+                <span class="eyebrow-text">Certified &amp; Trusted</span>
+                <span class="eyebrow-dash"></span>
+            </div>
+            <h2 class="section-title light" style="text-align:center">Certified<br><em>Quality</em></h2>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon"><img src="./Image/Trust1.avif" alt="Ayurvedic" loading="lazy"></div>
+                    <div class="trust-badge-label">Ayurvedic<br>Formulation</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon"><img src="./Image/Trust2.avif" alt="Quality" loading="lazy"></div>
+                    <div class="trust-badge-label">Quality<br>Tested</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon"><img src="./Image/Trust3.avif" alt="Trusted" loading="lazy"></div>
+                    <div class="trust-badge-label">Trusted<br>Users</div>
                 </div>
             </div>
         </div>
@@ -2726,32 +3032,6 @@
                     </div>
                     <div class="review-quote">Natural option मिला, यही सबसे अच्छा लगा। 2 महीने में noticeable changes
                         आए।</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST -->
-    <section class="trust section">
-        <div class="section-inner">
-            <div class="eyebrow" style="justify-content:center">
-                <span class="eyebrow-dash"></span>
-                <span class="eyebrow-text">Certified &amp; Trusted</span>
-                <span class="eyebrow-dash"></span>
-            </div>
-            <h2 class="section-title light" style="text-align:center">Certified<br><em>Quality</em></h2>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <div class="trust-badge-icon"><img src="./Image/Trust1.avif" alt="Ayurvedic" loading="lazy"></div>
-                    <div class="trust-badge-label">Ayurvedic<br>Formulation</div>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-badge-icon"><img src="./Image/Trust2.avif" alt="Quality" loading="lazy"></div>
-                    <div class="trust-badge-label">Quality<br>Tested</div>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-badge-icon"><img src="./Image/Trust3.avif" alt="Trusted" loading="lazy"></div>
-                    <div class="trust-badge-label">Trusted<br>Users</div>
                 </div>
             </div>
         </div>
