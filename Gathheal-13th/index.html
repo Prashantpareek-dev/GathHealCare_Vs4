@@ -1,0 +1,3036 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GATHHEAL Ayurvedic Formula | गाँठ के लिए Natural Ayurvedic Care</title>
+  <meta name="description" content="GATHHEAL Ayurvedic Formula – गाँठ की समस्या के लिए प्राकृतिक आयुर्वेदिक सहायता।">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    :root {
+      --primary-violet: #6e4aad;
+      --deep-violet: #4C1D95;
+      --soft-purple: #EDE9FE;
+      --white: #FFFFFF;
+      --dark-text: #312E41;
+      --gold: #ffbf51;
+      --border: #DDD6FE;
+
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --shadow-soft: 0 18px 40px rgba(76, 29, 149, 0.14);
+      --shadow-card: 0 10px 26px rgba(76, 29, 149, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Halant', serif;
+      background: var(--soft-purple);
+      color: var(--dark-text);
+      -webkit-font-smoothing: antialiased;
+      padding-top: 68px;
+      overflow-x: hidden;
+    }
+
+    /* ===================== TOP NAVBAR ===================== */
+    .top-navbar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(450px, 100%);
+      z-index: 600;
+      background: var(--primary-violet);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      box-shadow: 0 4px 16px rgba(76, 29, 149, 0.14);
+    }
+
+    .navbar-logo {
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+
+    .navbar-logo span {
+      color: var(--gold);
+    }
+
+    .navbar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: var(--deep-violet);
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.32);
+      transition: transform 160ms ease-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .navbar-btn:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .navbar-btn:active {
+      transform: scale(0.97);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    span,
+    a,
+    button,
+    label,
+    input {
+      font-family: 'Halant', serif;
+    }
+
+    /* ===================== PAGE SHELL / 450px FRAME ===================== */
+    .page-shell {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      background: var(--soft-purple);
+    }
+
+    .landing-frame {
+      width: min(450px, 100%);
+      background: var(--white);
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      .landing-frame {
+        box-shadow: none;
+      }
+
+      .page-shell {
+        background: var(--white);
+      }
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      top: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(450px, 100%);
+      height: 4px;
+      background: var(--soft-purple);
+      z-index: 500;
+    }
+
+    .scroll-indicator span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary-violet), var(--gold));
+      transition: width 0.1s linear;
+    }
+
+    .section-box {
+      width: 100%;
+      position: relative;
+      padding: 6px 26px 26px 26px;
+    }
+
+    .gold-text {
+      color: var(--gold);
+    }
+
+    .gold-underline {
+      color: var(--gold);
+      background: linear-gradient(transparent 95%, var(--gold) 95%);
+
+    }
+
+    /* ===================== SECTION 2: PROBLEM DETAIL (PAIN SECTION) ===================== */
+    .pain-box {
+      background: var(--white);
+      padding-top: 34px;
+    }
+
+    .pain-heading {
+      font-size: clamp(19px, 5.5vw, 23px);
+      line-height: 1.45;
+      font-weight: 700;
+      color: var(--deep-violet);
+      text-align: center;
+      margin: 0 0 10px;
+    }
+
+    .pain-subtext {
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--dark-text);
+      text-align: center;
+      opacity: 0.85;
+      margin: 0 0 22px;
+    }
+
+    .pain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+
+    .pain-list:last-of-type {
+      margin-bottom: 6px;
+    }
+
+    .pain-row {
+      display: flex;
+      align-items: stretch;
+      background: var(--soft-purple);
+      border-radius: 999px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .pain-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .pain-hex {
+      flex: 0 0 auto;
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      background: var(--pc, var(--primary-violet));
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .pain-row-text {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12px 14px;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: var(--dark-text);
+    }
+
+    .pain-icon {
+      position: relative;
+      flex: 0 0 auto;
+      width: 126px;
+      height: 126px;
+      margin: 5px;
+    }
+
+    .pain-icon-inner {
+      display: block;
+      width: 125px;
+      height: 125px ;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      border: 3px solid var(--pc, var(--primary-violet));
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .pain-icon-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pain-mark {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      border: 2px solid var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+
+    .pain-mark-check {
+      color: #ffffff;
+      background: #22a35a;
+    }
+
+    .pain-mark-cross {
+      color: #ffffff;
+      background: #DC2626;
+    }
+
+    .pain-arrow {
+      text-align: center;
+      color: var(--primary-violet);
+      font-size: 30px;
+      margin: 4px 0;
+      opacity: 0.9;
+    }
+
+    .pain-c1 {
+      --pc: #6FAE7A;
+    }
+
+    .pain-c2 {
+      --pc: #E0A526;
+    }
+
+    .pain-c3 {
+      --pc: #D6707D;
+    }
+
+    .pain-c4 {
+      --pc: #A97A4D;
+    }
+
+    .pain-c5 {
+      --pc: #E08A45;
+    }
+
+    .pain-c6 {
+      --pc: #6E8FB8;
+    }
+
+    .pain-c7 {
+      --pc: #A472B8;
+    }
+
+    .pain-c8 {
+      --pc: #479489;
+    }
+
+    @media (max-width: 480px) {
+      .pain-row-text {
+        font-size: 20px;
+        padding: 10px 12px;
+      }
+
+      .pain-hex {
+        width: 48px;
+        font-size: 16px;
+      }
+
+      .pain-icon {
+        width: 108px;
+        height: 108px;
+        margin: 4px;
+      }
+
+      .pain-icon-inner {
+        width: 106px;
+        height: 106px;
+      }
+
+      .pain-mark {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+      }
+    }
+
+    /* ===================== SECTION-3 solution section ===================== */
+    .hero-box {
+      background: var(--primary-violet);
+      color: var(--white);
+      text-align: center;
+      padding-top: 4px;
+      overflow: hidden;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+      opacity: 0.35;
+    }
+
+    .h2-sol {
+      font-size: clamp(24px, 7.5vw, 32px);
+      color: var(--gold);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    @keyframes floatSlow {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-18px) scale(1.06);
+      }
+    }
+
+    .hero-topline {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-badge i {
+      color: var(--gold);
+    }
+
+    .hero-imagewrap {
+      position: relative;
+      width: 230px;
+      margin: 0 auto 26px;
+      z-index: 2;
+    }
+
+    .hero-product-img {
+      width: 100%;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      animation: heroPop 1s ease;
+    }
+
+    .hero-gold-ring {
+      position: absolute;
+      inset: -12px;
+      border: 2px dashed var(--gold);
+      border-radius: 50%;
+      animation: spinSlow 14s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes heroPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero-heading {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(19px, 5.5vw, 22px);
+      line-height: 1.7;
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+
+    .hero-sub {
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      line-height: 1.3;
+      opacity: 0.92;
+      margin: 0 0 28px;
+    }
+
+    .hero-cta {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--deep-violet);
+      font-weight: 700;
+      font-size: 18px;
+      padding: 15px 26px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 12px 24px rgba(245, 158, 11, 0.35);
+      transition: transform 200ms ease-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .hero-cta:hover {
+        transform: translateY(-3px);
+      }
+    }
+
+    .hero-cta:active {
+      transform: scale(0.97);
+    }
+
+
+    /* ===================== SECTION 4: HOW IT WORKS ===================== */
+    .works-box {
+      background: var(--white);
+    }
+
+    .works-heading {
+      font-size: clamp(22px, 6.5vw, 28px);
+      line-height: 1.5;
+      font-weight: 700;
+      color: var(--deep-violet);
+      text-align: center;
+    }
+
+    .path-wrapper {
+      position: relative;
+      padding: 0 4px;
+    }
+
+    .path-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      transform: translateX(-50%);
+      background-image: linear-gradient(var(--primary-violet) 60%, transparent 40%);
+      background-size: 3px 16px;
+      background-repeat: repeat-y;
+      animation: dashMove 1.4s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes dashMove {
+      to {
+        background-position: 0 32px;
+      }
+    }
+
+    .path-node {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+      width: 98%;
+    }
+
+    .node-left {
+      flex-direction: row;
+      margin-right: auto;
+    }
+
+    .node-right {
+      flex-direction: row-reverse;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .node-circle-img {
+      flex: 0 0 auto;
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--primary-violet);
+      box-shadow: var(--shadow-card);
+    }
+
+    .node-circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .node-bubble {
+      background: var(--soft-purple);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      flex: 1;
+    }
+
+    .node-index {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-violet);
+      margin-bottom: 4px;
+    }
+
+    .node-bubble p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+      color: black;
+      font-weight: 500;
+    }
+
+    .path-arrow {
+      text-align: center;
+      color: var(--primary-violet);
+      font-size: 20px;
+      margin: 4px 0 12px;
+    }
+
+    .truth-banner {
+      margin-top: 26px;
+      background: linear-gradient(120deg, var(--deep-violet), var(--primary-violet));
+      color: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .truth-banner i {
+      font-size: 26px;
+      color: var(--gold);
+    }
+
+    .truth-banner p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* ===================== SECTION 5: VIDEO TESTIMONIALS ===================== */
+    .testimonial-box {
+      background: linear-gradient(180deg, var(--soft-purple) 0%, #E4DCFB 100%);
+    }
+
+    .testimonial-heading {
+      font-size: clamp(19px, 5.5vw, 22px);
+      font-weight: 700;
+      color: var(--deep-violet);
+      text-align: center;
+      margin: 0 0 28px;
+    }
+
+    .testi-slider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .testi-arrow {
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--primary-violet);
+      color: var(--white);
+      border: none;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .testi-arrow:hover {
+      background: var(--deep-violet);
+      transform: scale(1.06);
+    }
+
+    .testi-arrow:active {
+      transform: scale(0.94);
+    }
+
+    .testi-stage {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: stretch;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(76, 29, 149, 0.06);
+      transition: box-shadow 0.35s ease;
+    }
+
+    .testi-stage.is-playing {
+      box-shadow: 0 12px 30px rgba(76, 29, 149, 0.18), 0 0 0 2px var(--gold);
+    }
+
+    .testi-video-wrap {
+      position: relative;
+      flex: 0 0 44%;
+      max-width: 44%;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .testi-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+
+    .testi-play-hint {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 20px;
+      background: rgba(76, 29, 149, 0.28);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .testi-play-hint i {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testi-video-wrap.is-paused .testi-play-hint {
+      opacity: 1;
+    }
+
+    .testi-mute-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.55);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 2;
+    }
+
+    .testi-mute-btn:hover {
+      transform: scale(1.08);
+    }
+
+    .testi-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.25);
+      z-index: 2;
+    }
+
+    .testi-progress span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--gold);
+    }
+
+    .video-meta {
+      position: relative;
+      flex: 1 1 56%;
+      min-width: 0;
+      padding: 20px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(160deg, var(--white) 0%, #FBF9FF 100%);
+    }
+
+    .testi-quote-icon {
+      color: var(--gold);
+      font-size: 16px;
+      opacity: 0.85;
+    }
+
+    .video-meta p {
+      font-size: 14.5px;
+      line-height: 1.5;
+      margin: 0;
+      color: var(--dark-text);
+      font-style: italic;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .testi-identity {
+      margin-top: 4px;
+    }
+
+    .testi-identity h4 {
+      margin: 0 0 3px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--deep-violet);
+    }
+
+    .video-city {
+      font-size: 12.5px;
+      color: var(--primary-violet);
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .testi-verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+      margin-top: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--soft-purple);
+      color: var(--deep-violet);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .testi-verified-badge i {
+      color: #22a35a;
+      font-size: 12px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
+
+    .dot.active {
+      background: var(--primary-violet);
+      width: 22px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    /* ===================== SECTION: PRODUCT SUGGESTION VIDEOS ===================== */
+    .product-suggest-box {
+      background: linear-gradient(180deg, var(--deep-violet) 0%, var(--primary-violet) 100%);
+      padding-top: 34px;
+      padding-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .product-suggest-heading {
+      font-size: clamp(21px, 6vw, 26px);
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+
+    .product-suggest-sub {
+      font-size: 18px;
+      color: var(--soft-purple);
+      text-align: center;
+      opacity: 0.85;
+      margin: 0 0 28px;
+      line-height: 1.4;
+    }
+
+    .ps-carousel {
+      position: relative;
+    }
+
+    .ps-stage {
+      --ps-h: clamp(250px, 78vw, 330px);
+      --ps-w: calc(var(--ps-h) * 9 / 16);
+      position: relative;
+      height: var(--ps-h);
+      margin: 0 auto;
+    }
+
+    .ps-slide {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: var(--ps-w);
+      height: 100%;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+      transition: transform 0.5s cubic-bezier(0.22, 0.9, 0.32, 1), opacity 0.45s ease, filter 0.45s ease;
+      cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .ps-slide[data-pos="center"] {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+      z-index: 3;
+      filter: none;
+      cursor: default;
+      border-color: var(--gold);
+    }
+
+    .ps-slide[data-pos="right"] {
+      transform: translateX(calc(-50% + 74%)) scale(0.6);
+      opacity: 0.55;
+      z-index: 2;
+      filter: brightness(0.55);
+    }
+
+    .ps-slide[data-pos="left"] {
+      transform: translateX(calc(-50% - 74%)) scale(0.6);
+      opacity: 0.55;
+      z-index: 2;
+      filter: brightness(0.55);
+    }
+
+    .ps-slide[data-pos="hidden"] {
+      transform: translateX(-50%) scale(0.4);
+      opacity: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ps-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+
+    .ps-mute-btn {
+      position: absolute;
+      bottom: 14px;
+      left: calc(50% + var(--ps-w) / 2 - 44px);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.55);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: transform 0.2s ease;
+    }
+
+    .ps-mute-btn:active {
+      transform: scale(0.92);
+    }
+
+    .ps-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: var(--white);
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 6;
+      backdrop-filter: blur(3px);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .ps-arrow:active {
+      transform: translateY(-50%) scale(0.92);
+    }
+
+    .ps-arrow-left {
+      left: 0;
+    }
+
+    .ps-arrow-right {
+      right: 0;
+    }
+
+    .product-suggest-box .carousel-dots {
+      margin-top: 20px;
+    }
+
+    .product-suggest-box .dot {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .product-suggest-box .dot.active {
+      background: var(--gold);
+    }
+
+    @media (max-width: 480px) {
+      .ps-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+      }
+    }
+
+    /* ===================== SECTION 6: INGREDIENTS ===================== */
+    .ingredients-box {
+      background: var(--primary-violet);
+    }
+
+    .ingredients-heading {
+      font-size: clamp(22px, 6.5vw, 28px);
+      font-weight: 700;
+      color: var(--gold);
+      text-align: center;
+      margin: 0 0 30px;
+      line-height: 1.2;
+      padding-top: 16px;
+    }
+
+    .ingredient-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .ingredient-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--soft-purple);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .ingredient-row.reverse {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 5px solid var(--gold);
+    }
+
+    .ingredient-img {
+      flex: 0 0 auto;
+      width: 94px;
+      height: 94px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: var(--shadow-card);
+      border: 2px solid var(--primary-violet);
+    }
+
+    .ingredient-info h3 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      color: var(--primary-violet);
+    }
+
+    .ingredient-info p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      color: black;
+    }
+
+    /* ===================== SECTION 7: TRUST ===================== */
+
+    .ayu-wrapper {
+      width: 100%;
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .ayu-top {
+      position: relative;
+      background: var(--primary-violet);
+      padding: 26px 24px 34px;
+      overflow: hidden;
+    }
+
+
+
+    .ayu-badge {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: var(--deep-violet);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ayu-badge svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .ayu-top h2 {
+      position: relative;
+      font-size: clamp(19px, 5.5vw, 24px);
+      line-height: 1.4;
+      color: var(--white);
+      margin: 14px 0 0;
+      text-align: center;
+    }
+
+    .ayu-top h2 span {
+      color: var(--gold);
+    }
+
+    /* Content */
+    .ayu-list {
+      position: relative;
+      margin-top: -20px;
+      padding: 0 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ayu-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: transform .2s ease;
+    }
+
+    .ayu-icon-box {
+      flex-shrink: 0;
+      width: 124px;
+      height: 124px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ayu-icon-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+    }
+
+
+
+    .ayu-check {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 22px;
+      height: 22px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+      z-index: 2;
+    }
+
+    .ayu-check svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .ayu-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .ayu-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-violet);
+    }
+
+    .ayu-text {
+      font-size: 18px;
+      color: black;
+      line-height: 1.45;
+    }
+
+    /* Footer */
+    .ayu-bottom {
+      background: var(--soft-purple);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--deep-violet);
+    }
+
+    .ayu-bottom svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    @media (max-width:480px) {
+
+      .ayu-icon-box {
+        width: 68px;
+        height: 68px;
+        border-radius: 14px;
+      }
+
+      .ayu-icon-box svg {
+        width: 36px;
+        height: 36px;
+      }
+
+    }
+
+    /* ===================== SECTION 8: OFFER ===================== */
+
+    .gh-main-container {
+      width: 100%;
+      background: var(--soft-purple);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--border);
+    }
+
+    /* ================= HEADER PANEL ================= */
+    .gh-top-banner {
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255, 191, 81, 0.18), transparent 45%),
+        radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.08), transparent 40%),
+        linear-gradient(160deg, var(--deep-violet) 0%, var(--primary-violet) 100%);
+      padding: 26px 24px 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    /* corner ribbon */
+    .gh-promo-badge {
+      position: absolute;
+      top: 16px;
+      right: -46px;
+      background: var(--gold);
+      color: var(--deep-violet);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 52px;
+      transform: rotate(40deg);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .gh-logo-holder {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid rgba(255, 191, 81, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gh-title-text {
+      color: var(--white);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .gh-title-text span {
+      color: var(--gold);
+    }
+
+    .gh-sub-tagline {
+      color: var(--soft-purple);
+      font-size: 11.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      opacity: 0.85;
+    }
+
+    .gh-line-break {
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+      margin: 14px auto 14px;
+      border-radius: 2px;
+    }
+
+    .gh-main-heading {
+      color: var(--gold);
+      font-size: clamp(22px, 6.5vw, 28px);
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 0 6px;
+    }
+
+    .gh-question-text {
+      color: var(--white);
+      font-size: 18px;
+      margin-top: 8px;
+      opacity: 0.85;
+      padding-bottom: 20px;
+    }
+
+    /* ================= HERO PRODUCT ================= */
+    .gh-img-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: -20px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .gh-rounded-frame {
+      width: 142px;
+      height: 142px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: var(--shadow-card);
+      border: 5px solid var(--gold);
+      overflow: hidden;
+    }
+
+    .gh-rounded-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ================= OFFER TAG STRIP ================= */
+    .gh-alert-bar {
+      margin: 16px 24px 0;
+      background: var(--white);
+      border: 1px dashed var(--primary-violet);
+      border-radius: 12px;
+      text-align: center;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .gh-alert-bar .gh-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e25b5b;
+      animation: gh-pulse-blink 1.2s infinite;
+    }
+
+    @keyframes gh-pulse-blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.25;
+      }
+    }
+
+    .gh-alert-bar span {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--deep-violet);
+      letter-spacing: 0.3px;
+    }
+
+    /* ================= BODY ================= */
+    .gh-content-box {
+      padding: 0px 26px 28px;
+    }
+
+    .gh-benefits-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 18px 0 24px;
+    }
+
+    .gh-benefit-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--soft-purple);
+    }
+
+    .gh-benefit-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .gh-thumb-box {
+      flex-shrink: 0;
+      width: 96px;
+      height: 96px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 2px solid var(--white);
+      outline: 1px solid var(--border);
+    }
+
+    .gh-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gh-details-text h4 {
+      font-size: 20px;
+      color: var(--deep-violet);
+      font-weight: 700;
+    }
+
+    .gh-details-text p {
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.4;
+      margin-top: -30px;
+    }
+
+    /* ================= CTA ================= */
+    .gh-action-trigger {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(135deg, var(--gold), #ff9f43);
+      color: var(--deep-violet);
+      font-size: 18px;
+      font-weight: 800;
+      padding: 15px 0;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 12px 24px rgba(255, 159, 67, 0.4);
+      letter-spacing: 0.3px;
+      text-decoration: none;
+      transition: transform 160ms ease-out;
+    }
+
+    .gh-action-trigger:active {
+      transform: scale(0.97);
+    }
+
+    /* ===================== DISCLAIMER ===================== */
+    .disclaimer-box {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 10px 26px 100px;
+    }
+
+    .disclaimer-box p {
+      font-size: 8px;
+      line-height: 1.6;
+      color: #6B7280;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 0;
+      opacity: 0.54;
+    }
+
+    .disclaimer-box i {
+      margin-top: 3px;
+      color: var(--primary-violet);
+    }
+
+    .bottom-spacer {
+      height: 10px;
+    }
+
+    /* ===================== STICKY CTA ===================== */
+    .sticky-cta-wrap {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(450px, 100%);
+      z-index: 400;
+      padding: 12px 18px;
+      background: var(--white);
+      box-shadow: 0 -8px 24px rgba(76, 29, 149, 0.16);
+    }
+
+    .sticky-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(120deg, var(--primary-violet), var(--deep-violet));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 19px;
+      padding: 15px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 160ms ease-out;
+    }
+
+    .sticky-cta-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* ===================== FULL PAGE LOADER ===================== */
+    .page-loader {
+      position: fixed;
+      inset: 0;
+      background: rgba(49, 46, 65, 0.55);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .page-loader.active {
+      display: flex;
+    }
+
+    .loader-inner {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 34px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .loader-spinner {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 16px;
+      border: 5px solid var(--soft-purple);
+      border-top-color: var(--primary-violet);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-inner p {
+      font-size: 18px;
+      color: var(--deep-violet);
+      margin: 0;
+    }
+
+    /* ===================== SCROLL REVEAL ===================== */
+    .section-box {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .section-box.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===================== RESPONSIVE TWEAKS ===================== */
+    @media (max-width: 380px) {
+      .section-box {
+        padding: 46px 18px;
+      }
+
+      .problem-split {
+        flex-direction: column;
+      }
+
+      .problem-imgcol {
+        flex: none;
+      }
+
+      .problem-img {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar-logo {
+        font-size: 19px;
+      }
+
+      .navbar-btn {
+        font-size: 13px;
+        padding: 9px 14px;
+      }
+
+      .hero-imagewrap {
+        width: 190px;
+      }
+
+      .node-circle-img {
+        width: 92px;
+        height: 92px;
+      }
+
+      .video-meta {
+        padding: 16px 12px 14px;
+      }
+
+      .video-meta p {
+        font-size: 13px;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+      }
+
+      .testi-identity h4 {
+        font-size: 14.5px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .navbar-logo {
+        font-size: 17px;
+      }
+
+      .navbar-btn span {
+        display: none;
+      }
+
+      .pad-heading {
+        margin-right: 70px;
+      }
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===================== REDUCED MOTION ===================== */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .hero-gold-ring,
+      .path-line,
+      .hero-product-img {
+        animation: none;
+      }
+
+      .section-box {
+        transform: none;
+        transition: opacity 0.4s ease;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== TOP NAVBAR ==================== -->
+  <nav class="top-navbar">
+    <span class="navbar-logo">GATH<span>HEAL</span></span>
+    <a href="#order-form" class="navbar-btn"><i class="fa-solid fa-cart-shopping"></i> <span>Order Now</span></a>
+  </nav>
+
+  <div class="page-shell">
+    <div class="landing-frame" id="top">
+
+      <!-- ==================== STICKY MINI HEADER (scroll progress) ==================== -->
+      <div class="scroll-indicator"><span id="scrollBar"></span></div>
+      
+      <!-- ==================== SECTION 1: HERO BANNER ==================== -->
+      <img src="images/hero.avif" alt="गाँठ के लिए प्राकृतिक समाधान" class="" width="480" height="820"
+        fetchpriority="high">
+
+      <!-- ==================== SECTION 2: PROBLEM DETAIL (PAIN SECTION) ==================== -->
+      <section class="section-box pain-box">
+        <h2 class="pain-heading">गाँठ सिर्फ एक छोटी सी सूजन नहीं… <span class="gold-text">इसके पीछे कई कारण हो सकते
+            हैं!</span></h2>
+        <p class="pain-subtext">गाँठ बनने के पीछे शरीर में कई कारण हो सकते हैं जैसे:</p>
+
+        <div class="pain-list">
+          <div class="pain-row pain-c1">
+            <span class="pain-hex">01</span>
+            <span class="pain-row-text"><span>शरीर में जमा <strong>unwanted substances</strong></span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/1.avif" alt="शरीर में जमा unwanted substances" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row reverse pain-c2">
+            <span class="pain-hex">02</span>
+            <span class="pain-row-text"><span>अंदरूनी <strong>imbalance</strong></span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/2.avif" alt="अंदरूनी imbalance" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row pain-c3">
+            <span class="pain-hex">03</span>
+            <span class="pain-row-text"><span>खराब <strong>lifestyle</strong></span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/3.avif" alt="खराब lifestyle" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row reverse pain-c4">
+            <span class="pain-hex">04</span>
+            <span class="pain-row-text"><span>पुरानी सूजन या <strong>infection</strong></span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/4.avif" alt="पुरानी सूजन या infection" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+        </div>
+
+        <h2 class="pain-heading">क्या गाँठ आपकी <span class="gold-text">daily life</span> को भी प्रभावित कर रही है?
+        </h2>
+        <p class="pain-subtext">गाँठ की वजह से कई लोगों को:</p>
+
+        <div class="pain-list">
+          <div class="pain-row pain-c5">
+            <span class="pain-hex">05</span>
+            <span class="pain-row-text">बार-बार चिंता बनी रहती है</span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/5.avif" alt="बार-बार चिंता बनी रहती है" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row reverse pain-c6">
+            <span class="pain-hex">06</span>
+            <span class="pain-row-text"><span>शरीर में भारीपन या <strong>discomfort</strong> महसूस हो सकता
+                है</span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/6.avif" alt="शरीर में भारीपन या discomfort" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row pain-c7">
+            <span class="pain-hex">07</span>
+            <span class="pain-row-text">गांठ के बढ़ने का डर रहता है</span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/7.avif" alt="गांठ के बढ़ने का डर रहता है" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+          <div class="pain-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="pain-row reverse pain-c8">
+            <span class="pain-hex">08</span>
+            <span class="pain-row-text"><span><strong>daily</strong> के कामों में परेशानी महसूस हो सकती
+                है</span></span>
+            <span class="pain-icon">
+              <span class="pain-icon-inner">
+                <img src="images/8.avif" alt="daily के कामों में परेशानी" loading="lazy">
+              </span>
+              
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION-3: Solution ==================== -->
+      <section class="section-box hero-box">
+        <h2 class="h2-sol">क्या गाँठ के लिए कोई Natural Ayurvedic Solution हो सकता है?
+        </h2>
+        <div class="hero-blob hero-blob-a"></div>
+        <div class="hero-blob hero-blob-b"></div>
+        <div class="hero-topline">
+          <span class="hero-badge"><i class="fa-solid fa-leaf"></i> 100% Ayurvedic</span>
+        </div>
+
+        <div class="hero-imagewrap">
+          <img src="images/product.avif" alt="GATHHEAL Ayurvedic Formula प्रोडक्ट पैकेजिंग" loading="lazy"
+            class="hero-product-img">
+          <span class="hero-gold-ring"></span>
+        </div>
+
+        <h1 class="hero-heading">
+          गाँठ की समस्या को ध्यान में रखते हुए <span class="gold-underline">GATHHEAL Ayurvedic Formula </span>
+          <br> तैयार किया गया है, जिसमें प्राकृतिक ingredients का उपयोग किया गया है।
+
+        </h1>
+
+        <p class="hero-sub">
+          यह Ayurvedic Solution शरीर की अंदरूनी care को support करने और गाँठ से जुड़ी परेशानी में natural support देने
+          के लिए बनाया गया है।
+
+        </p>
+
+        <a href="#order-form" class="hero-cta">
+          <i class="fa-solid fa-circle-check"></i> अभी जानें Ayurvedic Solution
+        </a>
+      </section>
+
+      <!-- ==================== SECTION 4: HOW IT WORKS ==================== -->
+      <section class="section-box works-box">
+        <h2 class="works-heading">गाँठ के लिए यह आयुर्वेदिक Solution कैसे काम करता है?</h2>
+
+        <div class="path-wrapper">
+          <div class="path-line"></div>
+
+          <div class="path-node node-left">
+            <div class="node-circle-img">
+              <img src="images/sect-4-2nd.avif" alt="अंदरूनी balance बनाए रखने की Ayurvedic प्रक्रिया" loading="lazy">
+            </div>
+            <div class="node-bubble">
+              <span class="node-index">Step 1</span>
+              <p>शरीर में अंदरूनी balance बनाए रखने में मदद करता है।</p>
+            </div>
+          </div>
+          <div class="path-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="path-node node-right">
+            <div class="node-circle-img">
+              <img src="images/sect-4-1stimg.avif" alt="Natural ingredients से body cleansing को सपोर्ट" loading="lazy">
+            </div>
+            <div class="node-bubble">
+              <span class="node-index">Step 2</span>
+              <p>Natural ingredients के जरिए body की cleansing process को support करता है।</p>
+            </div>
+          </div>
+          <div class="path-arrow"><i class="fa-solid fa-angle-down"></i></div>
+
+          <div class="path-node node-left">
+            <div class="node-circle-img">
+              <img src="images/sect-4-3rd.avif" alt="Immunity और overall wellness को सपोर्ट करती Ayurvedic care"
+                loading="lazy">
+            </div>
+            <div class="node-bubble">
+              <span class="node-index">Step 3</span>
+              <p>शरीर की immunity और overall wellness को बेहतर support देता है।</p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="truth-banner">
+          <i class="fa-solid fa-seedling"></i>
+          <p>शुद्ध आयुर्वेदिक Ingredients से बना एक Natural Wellness Support Formula</p>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 6: KEY INGREDIENTS ==================== -->
+      <section class="section-box ingredients-box">
+        <h2 class="ingredients-heading">गाँठ की समस्या के लिए चुने गए Natural Ayurvedic Ingredients</h2>
+
+        <div class="ingredient-stack">
+          <div class="ingredient-row">
+            <img src="images/kanchan.avif" alt="Kanchanar Guggul Ayurvedic ingredient" loading="lazy"
+              class="ingredient-img">
+            <div class="ingredient-info">
+              <h3>Kanchanar Guggul</h3>
+              <p>Body wellness और traditional Ayurvedic care में उपयोग किया जाता है।</p>
+            </div>
+          </div>
+
+          <div class="ingredient-row reverse">
+            <img src="images/triphala.avif" alt="Triphala Ayurvedic ingredient" loading="lazy" class="ingredient-img">
+            <div class="ingredient-info">
+              <h3>Triphala</h3>
+              <p>Natural cleansing और digestion support के लिए जाना जाता है।</p>
+            </div>
+          </div>
+
+          <div class="ingredient-row">
+            <img src="images/haldi.avif" alt="Haldi Turmeric Ayurvedic ingredient" loading="lazy"
+              class="ingredient-img">
+            <div class="ingredient-info">
+              <h3>Haldi (Turmeric)</h3>
+              <p>अपने natural anti-inflammatory properties के लिए प्रसिद्ध है।</p>
+            </div>
+          </div>
+
+          <div class="ingredient-row reverse">
+            <img src="images/giloy.avif" alt="Giloy Ayurvedic ingredient" loading="lazy" class="ingredient-img">
+            <div class="ingredient-info">
+              <h3>Giloy</h3>
+              <p>Immunity support के लिए आयुर्वेद में उपयोग की जाती है।</p>
+            </div>
+          </div>
+
+          <div class="ingredient-row">
+            <img src="images/neem.avif" alt="Neem Ayurvedic ingredient" loading="lazy" class="ingredient-img">
+            <div class="ingredient-info">
+              <h3>Neem</h3>
+              <p>Natural wellness support के लिए उपयोग किया जाता है।</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 7: TRUST SECTION ==================== -->
+      <div class="ayu-wrapper">
+
+        <div class="ayu-top">
+
+          <span class="ayu-badge">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2 L14.4 8.2 L21 9 L16 13.6 L17.5 20 L12 16.6 L6.5 20 L8 13.6 L3 9 L9.6 8.2 Z"
+                fill="#4C1D95" />
+            </svg>
+            Certified &amp; Trusted
+          </span>
+
+          <h2>
+            गाँठ के लिए लोग <span>Ayurvedic Care</span> को क्यों पसंद कर रहे हैं?
+          </h2>
+
+        </div>
+
+        <div class="ayu-list">
+
+          <div class="ayu-box">
+
+            <div class="ayu-icon-box ayu-bg-one">
+
+
+              <img src="images/ayurvedic.avif" alt="">
+
+              <span class="ayu-check">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12l5 5L20 6" stroke="#ffbf51" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+
+            </div>
+
+            <div class="ayu-content">
+              <span class="ayu-title">Ayurvedic Formulation</span>
+              <span class="ayu-text">प्राचीन आयुर्वेदिक विधि से तैयार किया गया संतुलित फॉर्मूला</span>
+            </div>
+
+          </div>
+
+          <div class="ayu-box">
+
+            <div class="ayu-icon-box ayu-bg-two">
+
+
+              <img src="images/ingridients.avif" alt="">
+
+              <span class="ayu-check">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12l5 5L20 6" stroke="#ffbf51" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+
+            </div>
+
+            <div class="ayu-content">
+              <span class="ayu-title">Natural Ingredients Based</span>
+              <span class="ayu-text">100% प्राकृतिक जड़ी-बूटियों से निर्मित, बिना किसी मिलावट के</span>
+            </div>
+
+          </div>
+
+          <div class="ayu-box">
+
+            <div class="ayu-icon-box ayu-bg-three">
+
+              <img src="images/quality.avif" alt="">
+              <span class="ayu-check">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12l5 5L20 6" stroke="#ffbf51" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+
+            </div>
+
+            <div class="ayu-content">
+              <span class="ayu-title">Quality Tested Process</span>
+              <span class="ayu-text">हर बैच सख्त गुणवत्ता जांच प्रक्रिया से होकर गुजरता है</span>
+            </div>
+
+          </div>
+
+          <div class="ayu-box">
+
+            <div class="ayu-icon-box ayu-bg-four">
+
+              <img src="images/lab.avif" alt="">
+
+              <span class="ayu-check">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12l5 5L20 6" stroke="#ffbf51" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+
+            </div>
+
+            <div class="ayu-content">
+              <span class="ayu-title">Lab Tested</span>
+              <span class="ayu-text">प्रयोगशाला में प्रमाणित शुद्धता और सुरक्षा मानक</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="ayu-bottom">
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke="#4C1D95" stroke-width="1.6"
+              stroke-linejoin="round" />
+          </svg>
+
+          100% भरोसेमंद • हज़ारों संतुष्ट ग्राहक
+
+        </div>
+
+      </div>
+
+      <!-- ==================== SECTION: PRODUCT SUGGESTION VIDEOS ==================== -->
+      <section class="section-box product-suggest-box">
+        <h2 class="product-suggest-heading">आपके लिए हमारा <span class="gold-text">खास सुझाव</span></h2>
+        <p class="product-suggest-sub">वीडियो में देखें — GATHHEAL आपकी गाँठ की समस्या में कैसे मदद कर सकता है।
+          Swipe करें और पूरा अनुभव जानें।</p>
+
+        <div class="ps-carousel">
+          <button class="ps-arrow ps-arrow-left" id="psPrev" aria-label="पिछला वीडियो"><i
+              class="fa-solid fa-chevron-left"></i></button>
+
+          <div class="ps-stage" id="psStage">
+            <div class="ps-slide" data-index="0">
+              <video class="ps-video" playsinline preload="metadata"></video>
+            </div>
+            <div class="ps-slide" data-index="1">
+              <video class="ps-video" playsinline preload="metadata"></video>
+            </div>
+            <div class="ps-slide" data-index="2">
+              <video class="ps-video" playsinline preload="metadata"></video>
+            </div>
+            <button class="ps-mute-btn" id="psMute" aria-label="Mute/Unmute"><i
+                class="fa-solid fa-volume-high"></i></button>
+          </div>
+
+          <button class="ps-arrow ps-arrow-right" id="psNext" aria-label="अगला वीडियो"><i
+              class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="carousel-dots" id="psDots"></div>
+      </section>
+
+      <!-- ==================== SECTION 5: VIDEO TESTIMONIALS ==================== -->
+      <section class="section-box testimonial-box">
+        <h2 class="testimonial-heading">हमारे ग्राहकों का <span class="gold-text">अनुभव</span></h2>
+
+        <div class="testi-slider">
+          <button class="testi-arrow" id="testiPrev" aria-label="पिछला वीडियो"><i
+              class="fa-solid fa-chevron-left"></i></button>
+
+          <div class="testi-stage" id="testiStage">
+            <div class="testi-video-wrap">
+              <div class="testi-progress"><span id="testiProgressBar"></span></div>
+              <video id="testiVideo" class="testi-video" playsinline muted preload="metadata"></video>
+              <div class="testi-play-hint" id="testiPlayHint"><i class="fa-solid fa-play"></i></div>
+              <button class="testi-mute-btn" id="testiMute" aria-label="Mute/Unmute"><i
+                  class="fa-solid fa-volume-xmark"></i></button>
+            </div>
+            <div class="video-meta">
+              <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+              <p id="testiQuote"></p>
+              <div class="testi-identity">
+                <h4 id="testiName"></h4>
+                <span class="video-city"><i class="fa-solid fa-location-dot"></i> <span id="testiCity"></span></span>
+              </div>
+              <span class="testi-verified-badge"><i class="fa-solid fa-circle-check"></i> सत्यापित ग्राहक</span>
+            </div>
+          </div>
+
+          <button class="testi-arrow" id="testiNext" aria-label="अगला वीडियो"><i
+              class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="carousel-dots" id="testiDots">
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 8: OFFER SECTION ==================== -->
+      <div class="gh-main-container">
+
+        <div class="gh-top-banner">
+
+
+          <div class="gh-main-heading">गाँठ की समस्या के लिए Ayurvedic Care आज ही शुरू करें</div>
+          <div class="gh-question-text">क्या आप गाँठ के लिए प्राकृतिक उपचार शुरू करना चाहते हैं?</div>
+        </div>
+
+        <div class="gh-img-wrapper">
+          <div class="gh-rounded-frame">
+            <img src="images/product.avif" alt="Gathheal Ayurvedic Care">
+          </div>
+        </div>
+
+        <div class="gh-alert-bar">
+          <span class="gh-pulse-dot"></span>
+          <span>Limited Time Special Offer Available है</span>
+        </div>
+
+        <div class="gh-content-box">
+
+          <div class="gh-benefits-group">
+
+            <div class="gh-benefit-row">
+              <div class="gh-thumb-box">
+                <img src="images/aayur.avif" alt="Natural Ayurvedic Formula">
+              </div>
+              <div class="gh-details-text">
+                <h4>Natural Ayurvedic Formula</h4>
+                <p>शुद्ध जड़ी-बूटियों से तैयार, पूरी तरह प्राकृतिक</p>
+              </div>
+            </div>
+
+            <div class="gh-benefit-row">
+              <div class="gh-thumb-box">
+                <img src="images/easyuse.avif" alt="Easy To Use">
+              </div>
+              <div class="gh-details-text">
+                <h4>Easy To Use</h4>
+                <p>रोज़ाना इस्तेमाल में आसान, सरल दिनचर्या</p>
+              </div>
+            </div>
+
+            <div class="gh-benefit-row">
+              <div class="gh-thumb-box">
+                <img src="images/quai.avif" alt="Quality Assured Product">
+              </div>
+              <div class="gh-details-text">
+                <h4>Quality Assured Product</h4>
+                <p>जांचा-परखा और भरोसेमंद गुणवत्ता वाला उत्पाद</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="#" class="gh-action-trigger">Gathheal आज ही Order करें</a>
+
+
+        </div>
+
+
+
+        <!-- section-10 order form -->
+        <style>
+            /* ===================== SECTION 10: ORDER FORM (PRESCRIPTION PAD STYLE) ===================== */
+            .form-box {
+              background: var(--deep-violet);
+              padding-top: 56px;
+              padding-bottom: 56px;
+            }
+
+            .pad-card {
+              position: relative;
+              background: var(--white);
+              border-radius: 16px;
+              padding: 40px 26px 30px;
+              box-shadow: var(--shadow-soft);
+            }
+
+            .pad-perforation {
+              position: absolute;
+              top: -1px;
+              left: 0;
+              right: 0;
+              display: flex;
+              justify-content: space-evenly;
+              overflow: hidden;
+              height: 14px;
+            }
+
+            .pad-perforation span {
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              background: var(--deep-violet);
+              transform: translateY(-50%);
+            }
+
+            .pad-stamp {
+              position: absolute;
+              top: 26px;
+              right: 24px;
+              width: 58px;
+              height: 58px;
+              border-radius: 50%;
+              border: 3px dashed var(--gold);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--primary-violet);
+              font-size: 22px;
+              transform: rotate(-12deg);
+            }
+
+            .pad-heading {
+              font-size: clamp(22px, 6.5vw, 28px);
+              line-height: 1.55;
+              font-weight: 700;
+              color: var(--deep-violet);
+              margin: 10px 90px 10px 0;
+            }
+
+            .pad-sub {
+              font-size: 18px;
+              color: var(--dark-text);
+              margin: 0 0 26px;
+              padding-bottom: 20px;
+              border-bottom: 2px dashed var(--border);
+            }
+
+            .pad-field {
+              display: flex;
+              align-items: stretch;
+              border: 2px solid var(--border);
+              border-radius: 14px;
+              overflow: hidden;
+              margin-bottom: 6px;
+            }
+
+            .pad-field-icon {
+              flex: 0 0 auto;
+              width: 52px;
+              background: var(--soft-purple);
+              color: var(--primary-violet);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 18px;
+              border-right: 2px solid var(--border);
+            }
+
+            .pad-field-inner {
+              flex: 1;
+              padding: 8px 14px 6px;
+            }
+
+            .pad-field-label {
+              display: block;
+              font-size: 18px;
+              font-weight: 600;
+              color: var(--primary-violet);
+              margin-bottom: 2px;
+            }
+
+            .pad-field-inner input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-size: 18px;
+              font-family: 'Halant', serif;
+              color: var(--dark-text);
+              padding: 4px 0 8px;
+              background: transparent;
+            }
+
+            .field-error {
+              display: block;
+              min-height: 20px;
+              font-size: 18px;
+              color: #DC2626;
+              margin: 4px 0 14px 4px;
+            }
+
+            .pad-submit-btn {
+              width: 100%;
+              background: linear-gradient(120deg, var(--gold), #FBBF24);
+              color: var(--deep-violet);
+              font-weight: 700;
+              font-size: 19px;
+              padding: 17px;
+              border: none;
+              border-radius: 14px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              box-shadow: 0 14px 26px rgba(245, 158, 11, 0.35);
+              transition: transform 160ms ease-out;
+              margin-top: 10px;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+              .pad-submit-btn:hover {
+                transform: translateY(-2px);
+              }
+            }
+
+            .pad-submit-btn:active {
+              transform: scale(0.97);
+            }
+
+            .pad-secure-note {
+              text-align: center;
+              font-size: 18px;
+              color: #8A82A6;
+              margin: 16px 0 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            }
+          </style>
+
+        <!-- ==================== SECTION 10: ORDER FORM (PRESCRIPTION PAD STYLE) ==================== -->
+        <section class="section-box form-box" id="order-form">
+
+          <div class="pad-card">
+            <div class="pad-perforation">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="pad-stamp">
+              <i class="fa-solid fa-mortar-pestle"></i>
+            </div>
+
+            <h2 class="pad-heading">गाँठ के लिए Ayurvedic Solution की शुरुआत आज ही करें</h2>
+            <p class="pad-sub">अपनी जानकारी भरें, हमारी टीम आपसे संपर्क करेगी।</p>
+
+            <form id="orderForm" novalidate onsubmit="return submitForm(event)">
+              <div class="pad-field">
+                <span class="pad-field-icon"><i class="fa-solid fa-user"></i></span>
+                <div class="pad-field-inner">
+                  <span class="pad-field-label">नाम</span>
+                  <input type="text" id="fullName" name="fullName" placeholder="अपना नाम लिखें" autocomplete="off"
+                    required>
+                </div>
+              </div>
+              <span class="field-error" id="nameError"></span>
+
+              <div class="pad-field">
+                <span class="pad-field-icon"><i class="fa-solid fa-phone"></i></span>
+                <div class="pad-field-inner">
+                  <span class="pad-field-label">Mobile Number</span>
+                  <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="10 अंकों का नंबर"
+                    autocomplete="off" maxlength="10" required>
+                </div>
+              </div>
+              <span class="field-error" id="mobileError"></span>
+
+              <button type="submit" class="pad-submit-btn">
+                <i class="fa-solid fa-cart-shopping"></i> Order Now
+              </button>
+
+              <p class="pad-secure-note"><i class="fa-solid fa-lock"></i> आपकी जानकारी पूरी तरह सुरक्षित रहेगी।</p>
+            </form>
+          </div>
+        </section>
+        <script>
+          // ----- NAME FIELD: ALPHABETS ONLY -----
+          function initNameValidation() {
+            const nameInput = document.getElementById("fullName");
+            if (!nameInput) return;
+
+            nameInput.addEventListener("keydown", (e) => {
+              const allowedControlKeys = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab", "Home", "End"];
+              if (allowedControlKeys.includes(e.key)) return;
+              // allow spaces and alphabets (including Hindi Unicode range) only
+              const isAlpha = /^[a-zA-Zऀ-ॿ\s]$/.test(e.key);
+              if (!isAlpha) {
+                e.preventDefault();
+              }
+            });
+
+            nameInput.addEventListener("input", () => {
+              nameInput.value = nameInput.value.replace(/[^a-zA-Zऀ-ॿ\s]/g, "");
+              document.getElementById("nameError").textContent = "";
+            });
+          }
+
+          // ----- MOBILE FIELD: 10 DIGITS, FIRST DIGIT 6-9 -----
+          function initMobileValidation() {
+            const mobileInput = document.getElementById("mobileNumber");
+            if (!mobileInput) return;
+
+            mobileInput.addEventListener("keydown", (e) => {
+              const allowedControlKeys = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab", "Home", "End"];
+              if (allowedControlKeys.includes(e.key)) return;
+
+              const isDigit = /^[0-9]$/.test(e.key);
+              if (!isDigit) {
+                e.preventDefault();
+                return;
+              }
+
+              const currentValue = mobileInput.value;
+
+              // Block typing beyond 10 digits
+              if (currentValue.length >= 10) {
+                e.preventDefault();
+                return;
+              }
+
+              // First digit must be 6-9
+              if (currentValue.length === 0) {
+                if (!/^[6-9]$/.test(e.key)) {
+                  e.preventDefault();
+                  return;
+                }
+              }
+            });
+
+            mobileInput.addEventListener("input", () => {
+              let val = mobileInput.value.replace(/[^0-9]/g, "");
+              if (val.length > 0 && !/^[6-9]/.test(val)) {
+                val = val.slice(1);
+              }
+              val = val.slice(0, 10);
+              mobileInput.value = val;
+              document.getElementById("mobileError").textContent = "";
+            });
+          }
+        </script>
+
+        <!-- ==================== DISCLAIMER ==================== -->
+        <section class="section-box disclaimer-box">
+          <p><i class="fa-solid fa-circle-info"></i> This product is based on Ayurvedic ingredients and is intended to
+            support overall wellness. Results may vary from person to person. It is recommended to consult a healthcare
+            professional for any serious or persistent health concerns.</p>
+        </section>
+
+        <div class="bottom-spacer"></div>
+      </div>
+    </div>
+
+    <!-- ==================== STICKY CTA ==================== -->
+    <div class="sticky-cta-wrap">
+      <a href="#order-form" class="sticky-cta-btn">
+        <i class="fa-solid fa-cart-shopping"></i> अभी Order करें
+      </a>
+    </div>
+
+    <!-- ==================== FULL PAGE LOADER ==================== -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-inner">
+        <div class="loader-spinner"></div>
+        <p>आपका Order Process हो रहा है<span id="dotAnim">.</span></p>
+      </div>
+    </div>
+
+    <script>
+      // ============================================================
+      // GATHHEAL Landing Page — script.js
+      // ============================================================
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initScrollProgress();
+        initScrollReveal();
+        initNameValidation();
+        initMobileValidation();
+        initTestimonialSlider();
+        initProductSuggestSlider();
+      });
+
+      // ----- SCROLL PROGRESS BAR -----
+      function initScrollProgress() {
+        const bar = document.getElementById("scrollBar");
+        if (!bar) return;
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          bar.style.width = pct + "%";
+        });
+      }
+
+      // ----- SCROLL REVEAL ANIMATION -----
+      function initScrollReveal() {
+        const sections = document.querySelectorAll(".section-box");
+        if (!("IntersectionObserver" in window)) {
+          sections.forEach(s => s.classList.add("in-view"));
+          return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        sections.forEach(section => observer.observe(section));
+      }
+
+
+
+      // ----- TESTIMONIAL VIDEO SLIDER (auto-play on scroll-center + auto-advance + arrows + mute) -----
+      // NOTE: name/city/quote text for videos 4-7 is placeholder copy in the same style as the
+      // original 3 — replace with the real customers' details before publishing.
+      const testiData = [
+        {
+          name: "Dipak Jailor",
+          city: "Jaipur",
+          quote: "\"मेरी गर्दन के पास गाँठ थी, जिसकी वजह से मैं काफी परेशान था। मैंने GATHHEAL का इस्तेमाल शुरू किया और कुछ समय बाद मेरी गाँठ की समस्या दूर हो गई। अब मैं पहले से काफी बेहतर महसूस करता हूँ।\"",
+          poster: "video/compressed/1-poster.jpg",
+          video: "video/compressed/1.mp4"
+        },
+        {
+          name: "Anil Kumar",
+          city: "Lucknow",
+          quote: "\"मेरी बगल में गाँठ थी और इसे लेकर हमेशा चिंता रहती थी। GATHHEAL लेने के बाद मेरी गाँठ की समस्या ठीक हो गई और मुझे काफी राहत मिली।\"",
+          poster: "video/compressed/2-poster.jpg",
+          video: "video/compressed/2.mp4"
+        },
+        {
+          name: "Sunita Devi",
+          city: "Patna",
+          quote: "\"मेरी पीठ पर गाँठ थी जो काफी समय से परेशान कर रही थी। GATHHEAL का उपयोग करने के बाद मेरी गाँठ धीरे-धीरे खत्म हो गई और अब मुझे कोई परेशानी नहीं है।\"",
+          poster: "video/compressed/3-poster.jpg",
+          video: "video/compressed/3.mp4"
+        },
+        {
+          name: "Miraj Yadav",
+          city: "Kanpur",
+          quote: "\"मेरे हाथ में गाँठ उभर आई थी और डर लगता था। GATHHEAL शुरू करने के बाद धीरे-धीरे गाँठ छोटी होती गई और अब हाथ पूरी तरह सामान्य है।\"",
+          poster: "video/compressed/4-poster.jpg",
+          video: "video/compressed/4.mp4"
+        },
+        {
+          name: "Ramesh Verma",
+          city: "Indore",
+          quote: "\"पैर में गाँठ की वजह से चलने में दिक्कत होती थी। GATHHEAL के नियमित सेवन से गाँठ में आराम मिला और अब मैं बिना तकलीफ के चल-फिर पाता हूँ।\"",
+          poster: "video/compressed/5-poster.jpg",
+          video: "video/compressed/5.mp4"
+        },
+        {
+          name: "Sunil Singh",
+          city: "Varanasi",
+          quote: "\"पेट के पास गाँठ जैसा उभार महसूस होता था, जो चिंता का कारण बना हुआ था। GATHHEAL लेने के बाद यह समस्या धीरे-धीरे ठीक हो गई।\"",
+          poster: "video/compressed/6-poster.jpg",
+          video: "video/compressed/6.mp4"
+        },
+        {
+          name: "Vikram Chauhan",
+          city: "Ranchi",
+          quote: "\"गले के पास गाँठ की वजह से असहज महसूस होता था। GATHHEAL इस्तेमाल करने के बाद गाँठ में काफी राहत मिली और अब मैं आराम महसूस करता हूँ।\"",
+          poster: "video/compressed/7-poster.jpg",
+          video: "video/compressed/7.mp4"
+        }
+      ];
+
+      function initTestimonialSlider() {
+        const video = document.getElementById("testiVideo");
+        if (!video) return;
+
+        const videoWrap = document.querySelector(".testi-video-wrap");
+        const stage = document.getElementById("testiStage");
+        const nameEl = document.getElementById("testiName");
+        const cityEl = document.getElementById("testiCity");
+        const quoteEl = document.getElementById("testiQuote");
+        const muteBtn = document.getElementById("testiMute");
+        const prevBtn = document.getElementById("testiPrev");
+        const nextBtn = document.getElementById("testiNext");
+        const progressBar = document.getElementById("testiProgressBar");
+        const dotsWrap = document.getElementById("testiDots");
+
+        // Build one dot per testimonial (data-driven, so it always matches testiData.length)
+        dotsWrap.innerHTML = testiData
+          .map((_, i) => `<button class="dot${i === 0 ? " active" : ""}" data-index="${i}" aria-label="Testimonial ${i + 1}"></button>`)
+          .join("");
+        const dots = dotsWrap.querySelectorAll(".dot");
+
+        let testiIndex = 0;
+        let testiMuted = true; // muted by default so autoplay is allowed by the browser
+        let inView = false; // true while the stage is centered in the viewport
+
+        function updateMuteIcon() {
+          muteBtn.innerHTML = testiMuted
+            ? '<i class="fa-solid fa-volume-xmark"></i>'
+            : '<i class="fa-solid fa-volume-high"></i>';
+        }
+
+        function attemptPlay() {
+          video.muted = testiMuted;
+          video.play().catch(() => {
+            // Unmuted autoplay was blocked — fall back to muted playback
+            if (!testiMuted) {
+              testiMuted = true;
+              video.muted = true;
+              updateMuteIcon();
+              video.play().catch(() => { /* still blocked, user can tap to play */ });
+            }
+          });
+        }
+
+        function loadSlide(index) {
+          testiIndex = (index + testiData.length) % testiData.length;
+          const t = testiData[testiIndex];
+
+          progressBar.style.width = "0%";
+          video.pause();
+          video.src = t.video;
+          video.poster = t.poster;
+
+          nameEl.textContent = t.name;
+          cityEl.textContent = t.city;
+          quoteEl.textContent = t.quote;
+
+          dots.forEach((d, i) => d.classList.toggle("active", i === testiIndex));
+          updateMuteIcon();
+
+          // Only autoplay if the card is currently centered in the viewport
+          if (inView) attemptPlay();
+        }
+
+        // Auto-advance to the next testimonial once the current video finishes
+        video.addEventListener("ended", () => {
+          loadSlide(testiIndex + 1);
+        });
+
+        // Progress bar sync with video playback
+        video.addEventListener("timeupdate", () => {
+          if (video.duration) {
+            progressBar.style.width = (video.currentTime / video.duration) * 100 + "%";
+          }
+        });
+
+        // Premium "playing" glow + centered play/pause hint icon
+        video.addEventListener("playing", () => {
+          stage.classList.add("is-playing");
+          videoWrap.classList.remove("is-paused");
+        });
+        video.addEventListener("pause", () => {
+          stage.classList.remove("is-playing");
+          videoWrap.classList.add("is-paused");
+        });
+
+        // Arrow navigation
+        prevBtn.addEventListener("click", () => loadSlide(testiIndex - 1));
+        nextBtn.addEventListener("click", () => loadSlide(testiIndex + 1));
+
+        // Dot navigation
+        dotsWrap.addEventListener("click", (e) => {
+          const dot = e.target.closest(".dot");
+          if (dot) loadSlide(parseInt(dot.dataset.index, 10));
+        });
+
+        // Single mute/unmute control — applies to whichever testimonial is currently playing
+        muteBtn.addEventListener("click", () => {
+          testiMuted = !testiMuted;
+          video.muted = testiMuted;
+          updateMuteIcon();
+        });
+
+        // Autoplay when the card is centered in the viewport, pause when it scrolls away
+        if ("IntersectionObserver" in window) {
+          const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              inView = entry.isIntersecting;
+              if (inView) {
+                attemptPlay();
+              } else {
+                video.pause();
+              }
+            });
+          }, { threshold: 0.6, rootMargin: "-15% 0px -15% 0px" });
+          scrollObserver.observe(stage);
+        } else {
+          inView = true;
+        }
+
+        loadSlide(0);
+      }
+
+      // ----- PRODUCT SUGGESTION VIDEO CAROUSEL (coverflow: center focus + peeking sides, infinite loop) -----
+      const productVideos = [
+        { poster: "video/compressed/T-1-poster.jpg", video: "video/compressed/T-1.mp4" },
+        { poster: "video/compressed/T-2-poster.jpg", video: "video/compressed/T-2.mp4" },
+        { poster: "video/compressed/T-3-poster.jpg", video: "video/compressed/T-3.mp4" }
+      ];
+
+      function initProductSuggestSlider() {
+        const stage = document.getElementById("psStage");
+        if (!stage) return;
+
+        const slideEls = Array.from(stage.querySelectorAll(".ps-slide"));
+        const videos = slideEls.map(s => s.querySelector("video"));
+        const muteBtn = document.getElementById("psMute");
+        const prevBtn = document.getElementById("psPrev");
+        const nextBtn = document.getElementById("psNext");
+        const dotsWrap = document.getElementById("psDots");
+        const total = productVideos.length;
+
+        slideEls.forEach((s, i) => {
+          videos[i].poster = productVideos[i].poster;
+          videos[i].src = productVideos[i].video;
+        });
+
+        dotsWrap.innerHTML = productVideos
+          .map((_, i) => `<button class="dot${i === 0 ? " active" : ""}" data-index="${i}" aria-label="Video ${i + 1}"></button>`)
+          .join("");
+        const dots = dotsWrap.querySelectorAll(".dot");
+
+        let focus = 0;
+        let psMuted = false; // unmuted first time by default
+        let inView = false;
+
+        function updateMuteIcon() {
+          muteBtn.innerHTML = psMuted
+            ? '<i class="fa-solid fa-volume-xmark"></i>'
+            : '<i class="fa-solid fa-volume-high"></i>';
+        }
+
+        function posFor(i) {
+          let diff = i - focus;
+          if (diff > 1) diff -= total;
+          if (diff < -1) diff += total;
+          if (diff === 0) return "center";
+          if (diff === 1) return "right";
+          if (diff === -1) return "left";
+          return "hidden";
+        }
+
+        function render() {
+          slideEls.forEach((s, i) => { s.dataset.pos = posFor(i); });
+          dots.forEach((d, i) => d.classList.toggle("active", i === focus));
+        }
+
+        function playFocus() {
+          videos.forEach((v, i) => {
+            if (i !== focus) {
+              v.pause();
+              return;
+            }
+            v.currentTime = 0;
+            v.muted = psMuted;
+            const playPromise = v.play();
+            if (playPromise) {
+              playPromise.catch(() => {
+                // Unmuted autoplay blocked by the browser — fall back to muted playback
+                if (!psMuted) {
+                  psMuted = true;
+                  v.muted = true;
+                  updateMuteIcon();
+                  v.play().catch(() => { /* still blocked, user can tap mute/unmute */ });
+                }
+              });
+            }
+          });
+        }
+
+        function goTo(index) {
+          focus = (index + total) % total;
+          render();
+          if (inView) playFocus();
+        }
+
+        videos.forEach((v, i) => {
+          v.addEventListener("ended", () => {
+            if (i === focus) goTo(focus + 1);
+          });
+        });
+
+        prevBtn.addEventListener("click", () => goTo(focus - 1));
+        nextBtn.addEventListener("click", () => goTo(focus + 1));
+
+        dotsWrap.addEventListener("click", (e) => {
+          const dot = e.target.closest(".dot");
+          if (dot) goTo(parseInt(dot.dataset.index, 10));
+        });
+
+        slideEls.forEach((s, i) => {
+          s.addEventListener("click", () => { if (i !== focus) goTo(i); });
+        });
+
+        muteBtn.addEventListener("click", () => {
+          psMuted = !psMuted;
+          videos[focus].muted = psMuted;
+          updateMuteIcon();
+        });
+
+        // Browsers only allow unmuted autoplay after a real user gesture on the page.
+        // The scroll-triggered autoplay below has no such gesture, so it silently falls
+        // back to muted. The moment the visitor taps/clicks anywhere, unmute the video
+        // that's currently in focus so playback matches the "unmuted by default" intent.
+        function unlockAudio() {
+          const v = videos[focus];
+          if (psMuted) {
+            psMuted = false;
+            v.muted = false;
+            updateMuteIcon();
+          }
+          if (v.paused && inView) v.play().catch(() => {});
+        }
+        document.addEventListener("touchstart", unlockAudio, { once: true, passive: true });
+        document.addEventListener("click", unlockAudio, { once: true });
+
+        // Touch swipe support (buttons remain the primary control)
+        let touchStartX = null;
+        stage.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        stage.addEventListener("touchend", (e) => {
+          if (touchStartX === null) return;
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          if (Math.abs(dx) > 40) goTo(dx < 0 ? focus + 1 : focus - 1);
+          touchStartX = null;
+        });
+
+        // Autoplay when the carousel is centered in the viewport, pause when it scrolls away
+        if ("IntersectionObserver" in window) {
+          const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              inView = entry.isIntersecting;
+              if (inView) {
+                playFocus();
+              } else {
+                videos.forEach(v => v.pause());
+              }
+            });
+          }, { threshold: 0.6, rootMargin: "-15% 0px -15% 0px" });
+          scrollObserver.observe(stage);
+        } else {
+          inView = true;
+        }
+
+        render();
+        updateMuteIcon();
+      }
+
+      // ----- ORDER FORM SUBMIT (Prescription Pad Form) -----
+      function submitForm(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        const nameInput = document.getElementById("fullName");
+        const mobileInput = document.getElementById("mobileNumber");
+        const nameError = document.getElementById("nameError");
+        const mobileError = document.getElementById("mobileError");
+
+        const name = nameInput.value.trim();
+        const mobile = mobileInput.value.trim();
+
+        let valid = true;
+
+        if (name.length < 2 || !/^[a-zA-Zऀ-ॿ\s]+$/.test(name)) {
+          nameError.textContent = "कृपया सही नाम दर्ज करें।";
+          valid = false;
+        } else {
+          nameError.textContent = "";
+        }
+
+        if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+          mobileError.textContent = "कृपया सही 10 अंकों का मोबाइल नंबर दर्ज करें।";
+          valid = false;
+        } else {
+          mobileError.textContent = "";
+        }
+
+        if (!valid) return false;
+
+        // 👉 Submit button ko hide + disable karo
+        const submitBtn = form.querySelector("button[type='submit'], input[type='submit']");
+        if (submitBtn) {
+          submitBtn.style.display = "none";
+          submitBtn.disabled = true;
+        }
+
+        // 👉 Loading show karo
+        const loader = document.getElementById("pageLoader");
+        if (loader) loader.classList.add("active");
+
+        const formData = new FormData(form);
+        let redirected = false;
+
+        const timeout = setTimeout(() => {
+          if (!redirected) {
+            redirected = true;
+            window.location.href = "./Thankyou.html";
+          }
+        }, 2000);
+
+        fetch("https://script.google.com/macros/s/AKfycbyxj8sDZA-VSP3_xTX2mFZ884PyWUwFyqiFIUrMm4GVJbjG2Z7qaEslb1Q-Bnj0alj7/exec", {
+          method: "POST",
+          body: formData
+        })
+          .then(response => response.text())
+          .then(data => {
+            if (!redirected) {
+              clearTimeout(timeout);
+              redirected = true;
+              window.location.href = "./Thankyou.html";
+            }
+            if (loader) loader.classList.remove("active");
+          })
+          .catch(error => {
+            console.error("Fetch error:", error);
+            if (!redirected) {
+              clearTimeout(timeout);
+              redirected = true;
+              window.location.href = "./Thankyou.html";
+            }
+            if (loader) loader.classList.remove("active");
+          });
+
+        return false;
+      }
+
+      // Animated dots for loading state
+      let dotCount = 1;
+      setInterval(() => {
+        const d = document.getElementById("dotAnim");
+        if (d) {
+          dotCount = (dotCount % 3) + 1;
+          d.textContent = ".".repeat(dotCount);
+        }
+      }, 500);
+
+    </script>
+</body>
+
+</html>
